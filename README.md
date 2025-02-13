@@ -35,4 +35,7 @@ Therefore V<sub>out</sub>= 1.745V
 |0.201um|        55.3uA        |      1.744V      |
 |0.203um|        55.5uA        |      1.745V      |
 ### Result:
-1. DC analysis: 
+1. DC analysis: ![Image](https://github.com/user-attachments/assets/2e5ca3cb-b2a1-490a-89df-37e9c614dba4)
+   I<sub>D</sub>= 55.5uA
+   width = 0.203um
+2. Transient analysis: 
