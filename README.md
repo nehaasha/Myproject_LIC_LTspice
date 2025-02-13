@@ -40,4 +40,7 @@ Therefore V<sub>out</sub>= 1.745V
           width = 0.203um
 2. Transient analysis: ![Image](https://github.com/user-attachments/assets/f5a2507b-378b-4717-b850-3a16025447a4)
    we got V<sub>out</sub>= 1.745V for width of 0.205um
-3. AC analysis: 
+3. AC analysis: ![Image](https://github.com/user-attachments/assets/c864c284-7340-4d79-b87c-cdabfe5a9c49)
+   we got frequency = 210.45GHz\
+          Gain(dB) = -9.104dB
+### Reference: 
