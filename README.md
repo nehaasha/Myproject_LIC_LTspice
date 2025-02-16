@@ -38,7 +38,7 @@ Therefore, I = 55.5uA\
 From loop equation : V<sub>DD</sub> = I<sub>D</sub>R<sub>D</sub> + V<sub>out</sub> \
 where V<sub>DD</sub>= 1.8, I<sub>D</sub>=55.5uA, R<sub>D</sub>=1KHz\
 Therefore V<sub>out</sub>= 1.745V\
-Hence Q point= (1.745V, 55.5uA)
+Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
 ### Tabular Column:
 | Width | CurrentI<sub>D</sub> | V<sub>out</sub>  |
 |-------|----------------------|------------------|
@@ -49,7 +49,7 @@ Hence Q point= (1.745V, 55.5uA)
 | 0.2um |        55.2uA        |      1.744V      |
 |0.201um|        55.3uA        |      1.744V      |
 |0.203um|        55.5uA        |      1.745V      |
-### Result:
+### Simulation Result:
 1. DC analysis:
    ![Image](https://github.com/user-attachments/assets/2e5ca3cb-b2a1-490a-89df-37e9c614dba4)
 
@@ -77,7 +77,10 @@ Hence Q point= (1.745V, 55.5uA)
 
 
 ### Circuit Diagram 2:
+![Image](https://github.com/user-attachments/assets/34782522-ccf9-47a9-a6dd-cfde838df83e)
 
+### Components: 
+PMOSFET,NMOSFET (180nm), voltage supply(1.8,0.7), AC ground, wires.
 
 ### Theory :
 
@@ -95,15 +98,35 @@ DC analysis: In DC analysis the goal is to establish the stable operationg point
 <br>
 ### Procedure :
 1. Build the common source amplifier circuit as the circuit diagram using LTspice.
-2. Set the Resistor value as 1K, DC voltage as 1.8V, Gate voltage as 0.9V.
+2. Make PMOSFET as diode connected as per the circuit which makes it behave always in the saturation region. set the gate volatge of NMOSFET as 0.7V and supply volatage as 1.8V.
 3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
 4. Create a folder. Save the library file and LTspice file to the folder.
 5. Import the library file to LTspice using spice directive(.op).
-6. Set the mosfet model name CMOSN as given in the library file, length as 180nm, width as 1uF.
+6. Set the mosfet model name for PMOSFET- CMOSP and for NMOSFET- CMOSN as given in the library file, keeping length 180nm and width 1um for both transistors .
 7. Find the current value for the given power rating.
-8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant.
+8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value fore both the transistor in the simulation result.So that we need vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant.
 9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.9V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. 
+<br>
+### Calculatiom: 
+Take power as 100uW\
+We know that P=VI , where V=1.8V here \
+Therefore, I = 55.5uA\
+We get Vout= 1.704 which is V<sub>DS</sub>\
+we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
 
+### Tabular Column:
+| Width | CurrentI<sub>D</sub> | V<sub>out</sub>  |
+|-------|----------------------|------------------|
+|  1um  |        50.9uA        |      1.704V      |
+|1.01um |        51.4uA        |      1.704V      |
+|1.04um |        52.9uA        |      1.704V      |
+|1.06um |        53.9uA        |      1.704V      |
+|1.09um |        55.3uA        |      1.704V      |
+|1.092um|        55.4uA        |      1.704V      |
+|1.093um|        55.5uA        |      1.704V      |
+<br>
 
+### Simulation Result:
+1. DC analysis :
    
