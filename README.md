@@ -77,6 +77,7 @@ Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
 
 
 ### Circuit Diagram 2:
+![Image](https://github.com/user-attachments/assets/749e6d40-0c86-4415-a095-83eca895aa4a)
 
 ### Components: 
 PMOSFET,NMOSFET (180nm), voltage supply(1.8,0.7), AC ground, wires.
@@ -140,7 +141,7 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
    And a phase shift of 180 degree.
   
 3. AC analysis:
-   ![Image](https://github.com/user-attachments/assets/5a442856-bc1a-40ce-924e-62b7c430a3ac)
+ 
 we got frequency = 75.739GHz\
           Gain(dB) = 70.149mdB
 
