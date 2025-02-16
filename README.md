@@ -118,13 +118,13 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
 ### Tabular Column:
 | Width | CurrentI<sub>D</sub> | V<sub>out</sub>  |
 |-------|----------------------|------------------|
-|  1um  |        50.9uA        |      1.704V      |
-|1.01um |        51.4uA        |      1.704V      |
-|1.04um |        52.9uA        |      1.704V      |
-|1.06um |        53.9uA        |      1.704V      |
-|1.09um |        55.3uA        |      1.704V      |
-|1.092um|        55.4uA        |      1.704V      |
-|1.093um|        55.5uA        |      1.704V      |
+|  1um  |        51.3uA        |      0.84V       |
+|1.01um |        51.7uA        |      0.84V       |
+|1.04um |        52.7uA        |      0.84V       |
+|1.06um |        53.9uA        |      0.84V       |
+|1.1um  |        55.2uA        |      0.84V       |
+|1.103um|        55.4uA        |      0.84V       |
+|1.106um|        55.5uA        |      0.84V      |
 <br>
 
 ### Simulation Result:
@@ -136,14 +136,13 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
    we get DC operating point as (1.704V, 55.5uA)
   
 2. Transient analysis:
-  
+  ![Image](https://github.com/user-attachments/assets/5b678fd6-5916-4b60-8ef0-cb3348231149)
     we got V<sub>out</sub>= 1.704V for width of 1.093um\
    And a phase shift of 180 degree.
   
 3. AC analysis:
  ![Image](https://github.com/user-attachments/assets/44651d83-afe1-4473-a879-43538a336e8c)
-we got frequency = 75.739GHz\
-          Gain(dB) = 70.149mdB
+we got Gain(dB) = 5.54dB
 
 ### Inference: 
 1. Diode connected mosfet will always be in the saturation region.
