@@ -78,6 +78,7 @@ Hence Q point= (1.745V, 55.5uA)
 
 ### Circuit Diagram 2:
 
+
 ### Theory :
 
 The common source amplifier is most widely used amplifier configurations in analog electronics. It provides high voltage gain and is commonly used in signal amplification applications. The behaviour of amplifier is observed in three domains: DC analysis which determines the biasing and operating point, Transient analysis, which evalusted its time domain response, and AC analysis which examines its small signal behaviour and frequency response.\
