@@ -107,7 +107,7 @@ DC analysis: In DC analysis the goal is to establish the stable operationg point
 8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value fore both the transistor in the simulation result.So that we need vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant.
 9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.9V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. 
-<br>
+  
 ### Calculatiom: 
 Take power as 100uW\
 We know that P=VI , where V=1.8V here \
@@ -129,4 +129,7 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
 
 ### Simulation Result:
 1. DC analysis :
+   ![Image](https://github.com/user-attachments/assets/5e143440-2592-4977-a32f-65df705e79ad)
+<br>
+2. Transient analysis:
    
