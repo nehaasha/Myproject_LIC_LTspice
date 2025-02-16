@@ -66,7 +66,7 @@ Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
    ![Image](https://github.com/user-attachments/assets/c864c284-7340-4d79-b87c-cdabfe5a9c49)
 
     we got frequency = 210.45GHz\
-          Gain(dB) = -9.104dB\
+          Gain(dB) = -9.104dB
 ### Inference: 
 1. Width is directly proportional to Drain current. Hence other parameters become constant.
 2. From DC analysis we get the dc operating point and confirms whether the mosfet is in saturation region.
@@ -134,16 +134,16 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
           width = 1.093um\
    Vout= 1.704V\
    we get DC operating point as (1.704V, 55.5uA)
-<br>
+  
 2. Transient analysis:
    ![Image](https://github.com/user-attachments/assets/42a6d74e-5929-43ee-b509-860aeef264ed)
     we got V<sub>out</sub>= 1.704V for width of 1.093um\
    And a phase shift of 180 degree.
-<br>
+  
 3. AC analysis:
    ![Image](https://github.com/user-attachments/assets/5a442856-bc1a-40ce-924e-62b7c430a3ac)
 we got frequency = 75.739GHz\
-          Gain(dB) = 70.149mdB\
+          Gain(dB) = 70.149mdB
 
 ### Inference: 
 1. Diode connected mosfet will always be in the saturation region.
