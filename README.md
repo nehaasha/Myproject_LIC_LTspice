@@ -132,4 +132,7 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
    ![Image](https://github.com/user-attachments/assets/5e143440-2592-4977-a32f-65df705e79ad)
 <br>
 2. Transient analysis:
+   ![Image](https://github.com/user-attachments/assets/42a6d74e-5929-43ee-b509-860aeef264ed)
+<br>
+3. AC analysis:
    
