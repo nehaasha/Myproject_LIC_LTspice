@@ -136,12 +136,12 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
    we get DC operating point as (1.704V, 55.5uA)
   
 2. Transient analysis:
-   ![Image](https://github.com/user-attachments/assets/42a6d74e-5929-43ee-b509-860aeef264ed)
+  
     we got V<sub>out</sub>= 1.704V for width of 1.093um\
    And a phase shift of 180 degree.
   
 3. AC analysis:
- 
+ ![Image](https://github.com/user-attachments/assets/44651d83-afe1-4473-a879-43538a336e8c)
 we got frequency = 75.739GHz\
           Gain(dB) = 70.149mdB
 
