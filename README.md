@@ -77,7 +77,7 @@ Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
 
 
 ### Circuit Diagram 2:
-![Image](https://github.com/user-attachments/assets/34782522-ccf9-47a9-a6dd-cfde838df83e)
+
 
 ### Components: 
 PMOSFET,NMOSFET (180nm), voltage supply(1.8,0.7), AC ground, wires.
