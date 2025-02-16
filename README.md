@@ -57,12 +57,12 @@ Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
           width = 0.203um\
    Vout= 1.745V\
    we get DC operating point as (1.745V, 55.5uA)
-3. Transient analysis:
+2. Transient analysis:
    ![Image](https://github.com/user-attachments/assets/f5a2507b-378b-4717-b850-3a16025447a4)
 
    we got V<sub>out</sub>= 1.745V for width of 0.203um\
    And a phase shift of 180 degree.
-5. AC analysis:
+3. AC analysis:
    ![Image](https://github.com/user-attachments/assets/c864c284-7340-4d79-b87c-cdabfe5a9c49)
 
     we got frequency = 210.45GHz\
@@ -130,9 +130,26 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
 ### Simulation Result:
 1. DC analysis :
    ![Image](https://github.com/user-attachments/assets/5e143440-2592-4977-a32f-65df705e79ad)
+    we got I<sub>D</sub>= 55.5uA\
+          width = 1.093um\
+   Vout= 1.704V\
+   we get DC operating point as (1.704V, 55.5uA)
 <br>
 2. Transient analysis:
    ![Image](https://github.com/user-attachments/assets/42a6d74e-5929-43ee-b509-860aeef264ed)
+    we got V<sub>out</sub>= 1.704V for width of 1.093um\
+   And a phase shift of 180 degree.
 <br>
 3. AC analysis:
-   
+   ![Image](https://github.com/user-attachments/assets/5a442856-bc1a-40ce-924e-62b7c430a3ac)
+we got frequency = 75.739GHz\
+          Gain(dB) = 70.149mdB\
+
+### Inference: 
+1. Diode connected mosfet will always be in the saturation region.
+1. Width is directly proportional to Drain current. Hence other parameters become constant.
+2. From DC analysis we get the dc operating point and confirms whether the mosfet is in saturation region.
+3. Transient analysis shows how the mosfet behaves for the time varying AC signal(sine wave).
+4. We get amplified output with phase shift of 180 degree between input and output.
+5. From AC analysis we get gain and frequency.
+   <br>
