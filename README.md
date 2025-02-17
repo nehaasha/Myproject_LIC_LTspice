@@ -150,7 +150,7 @@ we got Gain(dB) = 5.54dB\
 highest cutoff frequency=17.972GHz
 ### Inference: 
 1. Diode connected mosfet will always be in the saturation region.
-2. 
+2. gate is connected to vout.
 1. Width is directly proportional to Drain current. Hence other parameters become constant.
 2. From DC analysis we get the dc operating point and confirms whether the mosfet is in saturation region.
 3. Transient analysis shows how the mosfet behaves for the time varying AC signal(sine wave).
