@@ -50,6 +50,7 @@ Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
 |0.201um|        55.3uA        |      1.744V      |
 |0.203um|        55.5uA        |      1.745V      |
 ### Simulation Result:
+* Aspect ratio= 0.203um/180nm= 1.1277.
 1. DC analysis:
    ![Image](https://github.com/user-attachments/assets/2e5ca3cb-b2a1-490a-89df-37e9c614dba4)
 
@@ -65,8 +66,8 @@ Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
 3. AC analysis:
    ![Image](https://github.com/user-attachments/assets/c864c284-7340-4d79-b87c-cdabfe5a9c49)
 
-    we got Gain(dB) = 2.267dB
-   -3dB= 2.267dB-3dB = -0.733dB
+    we got Gain(dB) = 2.267dB\
+   -3dB= 2.267dB-3dB = -0.733dB\
    highest cutoff frequency= 36.59GHz
 ### Inference: 
 1. Width is directly proportional to Drain current. Hence other parameters become constant.
@@ -125,10 +126,11 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
 |1.06um |        53.9uA        |      0.84V       |
 |1.1um  |        55.2uA        |      0.84V       |
 |1.103um|        55.4uA        |      0.84V       |
-|1.106um|        55.5uA        |      0.84V      |
+|1.106um|        55.5uA        |      0.84V       |
 <br>
 
 ### Simulation Result:
+*Aspect ratio= 1.106um/180nm = 6.144
 1. DC analysis :
    ![Image](https://github.com/user-attachments/assets/3c4ee451-26ed-48bf-b923-1e59d2182ef1)
     we got I<sub>D</sub>= 55.5uA\
@@ -143,13 +145,37 @@ we get Q point = (V<sub>DS</sub>, I<sub>D</sub>)= (1.704V, 55.5uA)\
   
 3. AC analysis:
  ![Image](https://github.com/user-attachments/assets/44651d83-afe1-4473-a879-43538a336e8c)
-we got Gain(dB) = 5.54dB
-
+we got Gain(dB) = 5.54dB\
+-3dB = 5.54dB-3dB = 2.54dB\
+highest cutoff frequency=17.972GHz
 ### Inference: 
 1. Diode connected mosfet will always be in the saturation region.
+2. 
 1. Width is directly proportional to Drain current. Hence other parameters become constant.
 2. From DC analysis we get the dc operating point and confirms whether the mosfet is in saturation region.
 3. Transient analysis shows how the mosfet behaves for the time varying AC signal(sine wave).
 4. We get amplified output with phase shift of 180 degree between input and output.
 5. From AC analysis we get gain and frequency.
    <br>
+
+   ### Comparision Table :
+
+   |       Parameters           |        Circuit 1        |          Circuit 2                |
+   |----------------------------|-------------------------|-----------------------------------|
+   |      Connection            |  Resistor and NMOSFET   |NMOSFET and Diode connected PMOSFET|
+   |         length             |        180nm            |            180nm                  |
+   |         width              |       0.203nm           |            1.106nm                |
+   |      aspect ratio          |      1.1277  (low)      |           6.144    (high)         |
+   |      Volatge supply        |      1.8V               |             1.8V                  |
+   |        Gate volatge        |       0.9V              |             0.7V                  |
+   |          Vout              |       1.745V            |            0.84V                  |
+   |         Power              |       100uW             |            100uW                  |
+   |        Current             |      55.5uA             |             55.5uA                |
+   |         Q Point            |   (1.745V,55.5uA)       |        (0.84V,55.5uA)             |
+   |        R<sub>D</sub>       |       1KHz              |              -                    |
+   |         Phase shift        |       180degree         |          180degree                |
+   |         Gain               |      2.267dB (low)      |         5.54dB (high)             |
+   |     -3dB gain              |      -0.733dB           |         2.54db                    |
+   |  highest cutoff frequency  |       36.59GHz          |          17.972GHz                |
+   
+               
