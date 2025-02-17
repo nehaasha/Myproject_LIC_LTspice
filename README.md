@@ -65,8 +65,9 @@ Hence Q point= (V<sub>DS</sub>, I<sub>D</sub>)= (1.745V, 55.5uA)
 3. AC analysis:
    ![Image](https://github.com/user-attachments/assets/c864c284-7340-4d79-b87c-cdabfe5a9c49)
 
-    we got frequency = 210.45GHz\
-          Gain(dB) = -9.104dB
+    we got Gain(dB) = 2.267dB
+   -3dB= 2.267dB-3dB = -0.733dB
+   highest cutoff frequency= 36.59GHz
 ### Inference: 
 1. Width is directly proportional to Drain current. Hence other parameters become constant.
 2. From DC analysis we get the dc operating point and confirms whether the mosfet is in saturation region.
