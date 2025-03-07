@@ -92,10 +92,11 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 ### Simulation Result :
 1. DC analysis:
    ![Image](https://github.com/user-attachments/assets/ac6894cb-b152-45b3-9136-272200414433)
-sub>out1</sub> = V<out2</sub> = 1.1V.\
+V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.\
 I<sub>D</sub> = 0.249mA which satisfy the condition P<=1mW.\
 sub>P</sub> = 0.399992V.\
 I<sub>SS</sub> = 0.499991mA.\
+Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.249mA)
 
 <br>
 
@@ -105,10 +106,35 @@ I<sub>SS</sub> = 0.499991mA.\
    Distortion starts for 250mV input amplitude.\
    input peak to peak voltage = 100mV.\
    output peak to peak voltage = 1.766V.\
-   A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.\
+   A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
 
 <br>
 
 3. AC analysis :
+   ![Image](https://github.com/user-attachments/assets/917cf5b9-a1d3-4060-9f55-7f5e3b9ba969)
+   3dB gain = 0 to 9.03GHz.\
+   CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+<br>
+### Inference:
+1. current varies with respect to width.
+2. To get the expected output vary R<sub>D</sub> value inversly.
+3. Mosfet should be in the saturation region.
+4. Both the transistors and resistors should be identical.
+5. By connecting both the transistors to a single R<sub>SS<sub> , current is kept constant. ultimately this type of connection helps to maintain the constant current throughout the circuit by acting as a feedback network even if there are any small changes in the current flowing through the transistors.
+6. Noise cancelation which is CMRR that is it will cancel the noise by taking the difference of input signals by cancelling the common mode signals.
+7. from dc analysis we get operating point,dirfferential gain, maximum input and output swing.
+8. form transient analysis we get input and output peak to peak values so that we can calculate the gain of the circuit.
+9. from ac analysis we get 3dB gain and CMRR of the circuit.
+
+### comparision table:
+|        Parameters      |     theoritical      |      simulation    |
+|------------------------|----------------------|--------------------|
+|     I<sub>SS</sub>     |       0.5mA          |      0.499991mA    |
+|     R<sub>D</sub>      |       3.6Kohm        |      3.600050Kohm  |
+|     R<sub>SS</sub>     |       0.8Kohm        |      0.8Kohm       |
+|      V<sub>GS</sub>    |        0.6V          |      0.6V          |
+|      g<sub>m</sub>     |        2.08m         |      2.12m         |
+|      A<sub>V</sub>     |        7.488         |      7.63V         |
+
    
    
