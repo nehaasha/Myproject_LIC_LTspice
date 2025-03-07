@@ -114,7 +114,9 @@ Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.249mA)
    ![Image](https://github.com/user-attachments/assets/917cf5b9-a1d3-4060-9f55-7f5e3b9ba969)
    3dB gain = 0 to 9.03GHz.\
    CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+
 <br>
+
 ### Inference:
 1. current varies with respect to width.
 2. To get the expected output vary R<sub>D</sub> value inversly.
@@ -127,6 +129,7 @@ Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.249mA)
 9. from ac analysis we get 3dB gain and CMRR of the circuit.
 
 ### comparision table:
+
 |        Parameters      |     theoritical      |      simulation    |
 |------------------------|----------------------|--------------------|
 |     I<sub>SS</sub>     |       0.5mA          |      0.499991mA    |
