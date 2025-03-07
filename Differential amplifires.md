@@ -5,3 +5,4 @@ Design differential amplifier for the following specifications. V<sub>DD</sub>=2
 ## components -
 Resistors (3.600050k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
 ### circuit 1:
+![Image](https://github.com/user-attachments/assets/34ddbb5e-9243-4838-b228-da4f71b0baa5)
