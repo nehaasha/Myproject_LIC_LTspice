@@ -10,7 +10,7 @@ A differential amplifier is a fundamental building block in analog circuits, use
 The NMOS differential amplifier offers high gain, excellent noise rejection, and linearity. It is widely used in analog and mixed-signal applications such as instrumentation amplifiers and high-speed data converters.
 <br>
 
-The NMOS differential amplifier consists of two identical NMOS transistors (M1 and M2) connected in a symmetrical configuration with a current source (I<sub>SS</sub>) at the tail. It operates by modulating the drain currents of the transistors based on the difference in their gate voltages. The circuit can be analyzed using DC analysis, transient analysis, and AC analysis to determine its performance. To work in the active region, the transistor must satisfy the condition V<sub>DS</sub> > (V<sub>GS</sub>-V<sub>TH</sub>).
+The NMOS differential amplifier consists of two identical NMOS transistors (M1 and M2) connected in a symmetrical configuration using a resistor (R<sub>SS</sub>) as the tail bias making the circuit more dependent on input common-mode voltage variations. This results in a lower Common-Mode Rejection Ratio (CMRR) compared to the ideal current-source configuration.To maintain the better stability, higher gain  we would use current source or a mosfet instead of resistor.All these maintains the constant cuurents throughout the circuits. It operates by modulating the drain currents of the transistors based on the difference in their gate voltages. The circuit can be analyzed using DC analysis, transient analysis, and AC analysis to determine its performance. To work in the active region, the transistor must satisfy the condition V<sub>DS</sub> > (V<sub>GS</sub>-V<sub>TH</sub>).
 
 <br>
 
