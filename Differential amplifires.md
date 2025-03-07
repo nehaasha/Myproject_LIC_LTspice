@@ -91,4 +91,14 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 
 ### Simulation Result :
 1. DC analysis:
+   ![Image](https://github.com/user-attachments/assets/ac6894cb-b152-45b3-9136-272200414433)
+sub>out1</sub> = V<out2</sub> = 1.1V.\
+I<sub>D</sub> = 0.249mA which satisfy the condition P<=1mW.\
+sub>P</sub> = 0.399992V.\
+I<sub>SS</sub> = 0.499991mA.\
+
+<br>
+
+2. Transient Analysis:
+   
    
