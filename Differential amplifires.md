@@ -2,8 +2,7 @@
 # Differential Amplifiers- DC,Transient and AC analysis using LTspice
 ## Aim:
 Design differential amplifier for the following specifications. V<sub>DD</sub>=2V,  P<=1mW,   V<sub>icm</sub> =1V,  v<sub>ocm</sub> =1.1V,  V<sub>P</sub> =0.4V. Perform DC analysis, Transient analysis and frequency response and extract the required parameters for all types of circuits.
-## components -
-Resistors (3.600050k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
+
 ### Theory:
 A differential amplifier is a fundamental building block in analog circuits, used for amplifying the difference between two input signals while rejecting common-mode signals. When implemented using NMOS transistors, it forms the input stage of operational amplifiers, sensor interfaces, and communication circuits.
 
@@ -15,18 +14,18 @@ The NMOS differential amplifier consists of two identical NMOS transistors (M1 a
 
 <br>
 
-**DC analysis** : DC analysis determines the biasing conditions of the transistors, ensuring that they operate in the saturation region for proper amplification.\
+1. **DC analysis** : DC analysis determines the biasing conditions of the transistors, ensuring that they operate in the saturation region for proper amplification.\
 The total bias current is split equally between the two transistors:  <br>           I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 \
 For a MOSFET operating in the saturation region, the drain current is given by:<br>  I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L (V<sub>GS</sub>-V<sub>TH</sub>)<sup>2</sup>\
-Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both transistors will have equal drain currents when no differential input is applied and will have V<sub>D1</sub> = V<sub>D2</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub>  which defines the operating point of the circuit.
+width is directly proportional to current I<sub>D</sub> and output depends on the value of R<sub>D</sub> value that is if R<sub>D</sub> increases output decreases inversely.
+Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both transistors will have equal drain currents when no differential input is applied and will have V<sub>D1</sub> = V<sub>D2</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub>  which defines the operating point of the circuit. 
+<br>
+
+2. **Transient analysis** : Transient analysis examines the time-domain response of the amplifier when subjected to a time-varying input.The transient response is largely influenced by the parasitic capacitances and the load connected to the amplifier.It provides the V<sub>out</sub> peak to peak value so that by using inout peak to peak value we get the gain of the circuit.
 
 <br>
 
-**Transient analysis** : Transient analysis examines the time-domain response of the amplifier when subjected to a time-varying input.The transient response is largely influenced by the parasitic capacitances and the load connected to the amplifier.It provides the V<sub>out</sub> peak to peak value so that by using inout peak to peak value we get the gain of the circuit.
-
-<br>
-
-**Ac analysis** : AC analysis evaluates the small-signal gain, frequency response, and bandwidth of the differential amplifier.
+3. **Ac analysis** : AC analysis evaluates the small-signal gain, frequency response, and bandwidth of the differential amplifier.
 <br> 
 
 **Formulas to be used** : 
@@ -47,5 +46,14 @@ Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both trans
 ### circuit 1:
 ![Image](https://github.com/user-attachments/assets/34ddbb5e-9243-4838-b228-da4f71b0baa5)
 
-### Procedure:
+## components -
+Resistors (3.600050k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
 
+### Procedure:
+1. Build the common source amplifier circuit as the circuit diagram using LTspice.
+2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600050Kohm and R<sub>SS</sub> value as 0.8Kohm, DC voltage as 2V, input common mode volatge as 1V.
+3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
+4. Create a folder. Save the library file and LTspice file to the folder.
+5. Import the library file to LTspice using spice directive(.op).
+6. Set the mosfet model name CMOSN as given in the library file, length as 180nm and vary the width till you get the exact Q point.
+7. 
