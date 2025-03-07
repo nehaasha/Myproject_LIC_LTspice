@@ -60,3 +60,20 @@ Resistors (3.600050k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) 
 8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. To get the V<sub>out</sub> as per the given value, vary the R<sub>D</sub> value.
 9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 1V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.Take the difference of V<sub>out1</sub> and V<sub>out2</sub> waveforms,and calculate the diffrential gain.Also note down for what valur of input amplitude the distortion starts.
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
+
+### Calculation:
+P=1mW\
+I<sub>SS</sub> = P/V = 1mW/2V = 0.5mA.\
+I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 = 0.25mA.\
+V<sub>GS</sub> = V<sub>incm</sub> - V<sub>P</sub> = 1-0.4 = 0.6V.\
+R<sub>D</sub> = V<sub>outcm</sub>-V<sub>DD</sub>/ I<sub>D</sub> = 1.1-2/0.25m = 3.6Kohm.\
+R<sub>SS</sub> = V<sub>p</sub>/ I<sub>SS</sub> = 0.4/0.5m = 0.8Kohm.\
+g<sub>m</sub> = 2I<sub>D</sub>/V<subOV</sub> = 2(0.25m)/0.6-0.36 = 2.08m.\
+A<sub>V</sub> = -g<sub>m</sub>R<sub>D</sub> = -2.08m(3.6K) = 7.488V/V.\
+A<sub>V</sub>dB = 20log(A<sub>V</sub>) = 20log(7.488) = 17.48.\
+V<sub>incm(min)</sub> = V<sub>TH</sub> + V<sub>P</sub> = 0.36 + 0.4 = 0.76V.\
+V<sub>incm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> + V<sub>TH</sub> = 2-(0.25m)(3.6K)+0.36 = 1.46V.\
+imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub> = 0.7V.\
+V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> = 0.64V.\
+V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> = 1.1V.\
+output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
