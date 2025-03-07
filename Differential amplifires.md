@@ -100,5 +100,15 @@ I<sub>SS</sub> = 0.499991mA.\
 <br>
 
 2. Transient Analysis:
+   ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
+
+   Distortion starts for 250mV input amplitude.\
+   input peak to peak voltage = 100mV.\
+   output peak to peak voltage = 1.766V.\
+   A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.\
+
+<br>
+
+3. AC analysis :
    
    
