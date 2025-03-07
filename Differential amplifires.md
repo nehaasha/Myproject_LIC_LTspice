@@ -9,14 +9,43 @@ A differential amplifier is a fundamental building block in analog circuits, use
 
 <br>
 The NMOS differential amplifier offers high gain, excellent noise rejection, and linearity. It is widely used in analog and mixed-signal applications such as instrumentation amplifiers and high-speed data converters.
+<br>
+
+The NMOS differential amplifier consists of two identical NMOS transistors (M1 and M2) connected in a symmetrical configuration with a current source (I<sub>SS</sub>) at the tail. It operates by modulating the drain currents of the transistors based on the difference in their gate voltages. The circuit can be analyzed using DC analysis, transient analysis, and AC analysis to determine its performance. To work in the active region, the transistor must satisfy the condition V<sub>DS</sub> > (V<sub>GS</sub>-V<sub>TH</sub>).
 
 <br>
-The NMOS differential amplifier consists of two identical NMOS transistors (M1 and M2) connected in a symmetrical configuration with a current source (I<sub>SS</sub>) at the tail. It operates by modulating the drain currents of the transistors based on the difference in their gate voltages. The circuit can be analyzed using DC analysis, transient analysis, and AC analysis to determine its performance.
 
-<br>
 **DC analysis** : DC analysis determines the biasing conditions of the transistors, ensuring that they operate in the saturation region for proper amplification.\
-The total bias current is split equally between the two transistors:               I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 \
-For a MOSFET operating in the saturation region, the drain current is given by:    I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L (V<sub>GS</sub>-V<sub>TH</sub>)<sup>2</sup>
+The total bias current is split equally between the two transistors:  <br>           I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 \
+For a MOSFET operating in the saturation region, the drain current is given by:<br>  I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L (V<sub>GS</sub>-V<sub>TH</sub>)<sup>2</sup>\
+Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both transistors will have equal drain currents when no differential input is applied and will have V<sub>D1</sub> = V<sub>D2</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub>  which defines the operating point of the circuit.
+
+<br>
+
+**Transient analysis** : Transient analysis examines the time-domain response of the amplifier when subjected to a time-varying input.The transient response is largely influenced by the parasitic capacitances and the load connected to the amplifier.It provides the V<sub>out</sub> peak to peak value so that by using inout peak to peak value we get the gain of the circuit.
+
+<br>
+
+**Ac analysis** : AC analysis evaluates the small-signal gain, frequency response, and bandwidth of the differential amplifier.
+<br> 
+
+**Formulas to be used** : 
+1. I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 
+2. I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L (V<sub>GS</sub>-V<sub>TH</sub>)<sup>2</sup>
+3. V<sub>incm</sub> = V<sub>GS</sub> + V<sub>P</sub>
+4. V<sub>outcm</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub>
+5. g<sub>m</sub> = 2I<sub>D</sub>/V<subOV</sub>
+6. A<sub>V</sub> = -g<sub>m</sub>R<sub>D</sub>
+7. A<sub>V</sub>dB = 20log(A<sub>V</sub>)
+8. V<sub>incm(min)</sub> = V<sub>TH</sub> + V<sub>P</sub>
+9. V<sub>incm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> + V<sub>TH</sub>
+10. imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub>
+11. V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub>
+12. V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub>
+13. output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub>
+
 ### circuit 1:
 ![Image](https://github.com/user-attachments/assets/34ddbb5e-9243-4838-b228-da4f71b0baa5)
+
+### Procedure:
 
