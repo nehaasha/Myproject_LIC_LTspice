@@ -77,3 +77,14 @@ imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub> = 0.7V.\
 V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> = 0.64V.\
 V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> = 1.1V.\
 output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
+
+### Tabular Column:
+|   Width  | CurrentI<sub>D</sub> | V<sub>out</sub>  |
+|----------|----------------------|------------------|
+|    16um  |       0.243uA        |      1.12382V    |
+|    17um  |       0.245uA        |      1.11613V    |
+|    18um  |       0.245uA        |      1.10898V    |
+|    19um  |        0.249uA       |      1.1023V     |
+|   19.1um |        0.249uA       |      1.10166V    |
+|  19.33um |        0.249uA       |      1.10019V    |
+|  19.36um |        0.249mA       |      1.1V        |
