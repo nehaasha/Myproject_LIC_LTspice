@@ -88,3 +88,7 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 |   19.1um |        0.249uA       |      1.10166V    |
 |  19.33um |        0.249uA       |      1.10019V    |
 |  19.36um |        0.249mA       |      1.1V        |
+
+### Simulation Result :
+1. DC analysis:
+   
