@@ -107,7 +107,7 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
 
 ### Calculation:
-* P=1mW\
+* P=1mW
 * I<sub>SS</sub> = P/V = 1mW/2V  <table><td>=0.5mA</td><table>
   
 * I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2  <table><td>=0.25mA</td><table> 
@@ -153,13 +153,16 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
   * For input peak to peak volatge 200mV.
   * Distortion occurs
 
-![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
+   ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
 
   
   * input peak to peak voltage = 100mV (linear amplifier range).
   * output peak to peak voltage = 1.766V.
   * A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
 Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
+<br>
+***To Calculate Output maximum swing and Input maximum swing***
+
 
 <br>
 
@@ -217,7 +220,7 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
 
 ### Calculation:
-* P=1mW\
+* P=1mW
 * I<sub>SS</sub> = P/V = 1mW/2V  <table><td>=0.5mA</td><table>
   
 * I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2  <table><td>=0.25mA</td><table> 
