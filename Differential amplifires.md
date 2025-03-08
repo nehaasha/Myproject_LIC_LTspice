@@ -30,7 +30,7 @@ Basically, A differential amplifier in common mode operation is designed to reje
 <br>
 
 ### Types of Diffrential Amplifier:
- 1. Differential Amplifier with Resistor Load :
+1. Differential Amplifier with Resistor Load :
  * Provides a stable voltage drop and acts as a load.
  * Simple design, low cost.
  * Stabilizes biasing.
@@ -39,7 +39,7 @@ Basically, A differential amplifier in common mode operation is designed to reje
  * High power dissipation in the load resistor.
     <br>
 
- 2. Differential Amplifier with Current Source Load (Tail Current Source):
+2. Differential Amplifier with Current Source Load (Tail Current Source):
  * Higher voltage gain compared to resistor load.
  * Improved CMRR.
  * Provides stable and balanced output.
@@ -48,7 +48,7 @@ Basically, A differential amplifier in common mode operation is designed to reje
  * Temperature drift may affect the current source.
 <br>
 
- 3. Differential Amplifier with MOSFET:
+3. Differential Amplifier with MOSFET:
  * Provides extremely high voltage gain.
  * High CMRR and linearity.
  * Very low power consumption.
@@ -135,29 +135,33 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 |  19.36um |        0.249996uA    |      1.10001V    |   0.399993V  |
 |19.3625um |        0.25mA        |      1.1V        |      0.4V    |
 
+<br>
+
 ### Simulation Result :
-1. DC analysis:\
-  ![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
-  ![Image](https://github.com/user-attachments/assets/626b570b-4369-4982-82cf-cca7081c483b)
-* V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
+
+1.DC analysis:\
+![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
+![Image](https://github.com/user-attachments/assets/626b570b-4369-4982-82cf-cca7081c483b)
++ V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
 * I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.
 * V<sub>P</sub> = 0.4V.
 * I<sub>SS</sub> = 0.5mA.
 * Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
-
 <br>
 
-2. Transient Analysis: for Vin= 1V.
+2.Transient Analysis: for Vin= 1V.
    ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
-* For input peak to peak volatge 200mV.
-* Distortion occurs
-
+  * input peak to peak volatge 200mV.
+  * Distortion occurs
+    
+   <br>
+  
    ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
 
   
-* input peak to peak voltage = 100mV (linear amplifier range).
-* output peak to peak voltage = 1.766V.
-* A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
+  * input peak to peak voltage = 100mV (linear amplifier range).
+  * output peak to peak voltage = 1.766V.
+  * A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
 Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
 
 <br>
@@ -168,11 +172,11 @@ Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output 
 
 <br>
 
-3. AC analysis :
+3.AC analysis :
    ![Image](https://github.com/user-attachments/assets/35511c29-551f-4d5a-98a5-3e63091e768c)
-* 3dB Gain= 16.5dB
-* 3dB gain bandwidth = 0 to 3.839GHz.
-* CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+  * 3dB Gain= 16.5dB
+  * 3dB gain bandwidth = 0 to 3.839GHz.
+  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
 
 <br>
 
@@ -280,4 +284,4 @@ Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as l
 Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
 
 3. AC analysis:
-   
+
