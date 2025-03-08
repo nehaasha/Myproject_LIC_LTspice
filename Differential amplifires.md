@@ -146,11 +146,12 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 
 <br>
 
-2. Transient Analysis: For 50mV amplitude
+2. Transient Analysis: 
    
-   
-  
- ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
+   * For input peak to peak volatge 200mV.
+   * Distortion occurs
+
+![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
 
   
   * input peak to peak voltage = 100mV (linear amplifier range).
