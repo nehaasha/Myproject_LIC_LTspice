@@ -1,4 +1,4 @@
-# Experiment 2
+# Experiment 3
 # Differential Amplifiers- DC,Transient and AC analysis using LTspice
 ## Aim:
 Design differential amplifier for the following specifications. V<sub>DD</sub>=2V,  P<=1mW,   V<sub>icm</sub> =1V,  v<sub>ocm</sub> =1.1V,  V<sub>P</sub> =0.4V. Perform DC analysis, Transient analysis and frequency response and extract the required parameters for all types of circuits.
@@ -92,7 +92,7 @@ Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both trans
 ![Image](https://github.com/user-attachments/assets/008010cf-91f4-4acb-8ef9-00a71464b45a)
 
 ## components -
-Resistors (3.600010k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
+Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
 
 ### Procedure:
 1. Build the common source amplifier circuit as the circuit diagram using LTspice.
@@ -107,21 +107,21 @@ Resistors (3.600010k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) 
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
 
 ### Calculation:
-P=1mW\
-I<sub>SS</sub> = P/V = 1mW/2V = 0.5mA.\
-I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 = 0.25mA.\
-V<sub>GS</sub> = V<sub>incm</sub> - V<sub>P</sub> = 1-0.4 = 0.6V.\
-R<sub>D</sub> = V<sub>outcm</sub>-V<sub>DD</sub>/ I<sub>D</sub> = 1.1-2/0.25m = 3.6Kohm.\
-R<sub>SS</sub> = V<sub>p</sub>/ I<sub>SS</sub> = 0.4/0.5m = 0.8Kohm.\
-g<sub>m</sub> = 2I<sub>D</sub>/V<subOV</sub> = 2(0.25m)/0.6-0.36 = 2.08m.\
-A<sub>V</sub> = -g<sub>m</sub>R<sub>D</sub> = -2.08m(3.6K) = 7.488V/V.\
-A<sub>V</sub>dB = 20log(A<sub>V</sub>) = 20log(7.488) = 17.48.\
-V<sub>incm(min)</sub> = V<sub>TH</sub> + V<sub>P</sub> = 0.36 + 0.4 = 0.76V.\
-V<sub>incm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> + V<sub>TH</sub> = 2-(0.25m)(3.6K)+0.36 = 1.46V.\
-imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub> = 0.7V.\
-V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> = 0.64V.\
-V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> = 1.1V.\
-output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
+* P=1mW\
+* I<sub>SS</sub> = P/V = 1mW/2V = 0.5mA.\
+* I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 = 0.25mA.\
+* V<sub>GS</sub> = V<sub>incm</sub> - V<sub>P</sub> = 1-0.4 = 0.6V.\
+* R<sub>D</sub> = V<sub>outcm</sub>-V<sub>DD</sub>/ I<sub>D</sub> = 1.1-2/0.25m = 3.6Kohm.\
+* R<sub>SS</sub> = V<sub>p</sub>/ I<sub>SS</sub> = 0.4/0.5m = 0.8Kohm.\
+* g<sub>m</sub> = 2I<sub>D</sub>/V<subOV</sub> = 2(0.25m)/0.6-0.36 = 2.08m.\
+* A<sub>V</sub> = -g<sub>m</sub>R<sub>D</sub> = -2.08m(3.6K) = 7.488V/V.\
+* A<sub>V</sub>dB = 20log(A<sub>V</sub>) = 20log(7.488) = 17.48.\
+* V<sub>incm(min)</sub> = V<sub>TH</sub> + V<sub>P</sub> = 0.36 + 0.4 = 0.76V.\
+* V<sub>incm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> + V<sub>TH</sub> = 2-(0.25m)(3.6K)+0.36 = 1.46V.\
+* imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub> = 0.7V.\
+* V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> = 0.64V.\
+* V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> = 1.1V.\
+* output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 
 ### Tabular Column:
 |   Width  | CurrentI<sub>D</sub> | V<sub>out</sub>  | V<sub>P</sub>|
@@ -146,14 +146,11 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 
 <br>
 
-2. Transient Analysis:
-   ![Image](https://github.com/user-attachments/assets/5b1fcd5d-fe3b-4047-a886-7a5fd72c4f6c)
-<br>
-
-*  Distrotion Starts for 80mV input amplitude.
-  <br>
+2. Transient Analysis: For 50mV amplitude
+   
+   
   
-   ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
+ ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
 
   
   * input peak to peak voltage = 100mV (linear amplifier range).
@@ -164,7 +161,7 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 
 3. AC analysis :
    ![Image](https://github.com/user-attachments/assets/917cf5b9-a1d3-4060-9f55-7f5e3b9ba969)
-  * 3dB gain = 0 to 9.03GHz.\
+  * 3dB gain bandwidth = 0 to 9.03GHz.\
   * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
 
 <br>
@@ -195,5 +192,37 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 <br>
 
 ## Circuit 2 (Current source) :
+![Image](https://github.com/user-attachments/assets/abc1b776-2e14-4103-aa85-efa53d071bd9)
 
+## components -
+Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires, Current source - 0.5mA.
+
+### Procedure:
+1. Build the common source amplifier circuit as the circuit diagram using LTspice.
+2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600010Kohm and Current source I<sub>SS</sub> value as 0.5mA, DC voltage as 2V, input common mode volatge as 1V.
+3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
+4. Create a folder. Save the library file and LTspice file to the folder.
+5. Import the library file to LTspice using spice directive(.op).
+6. Find the current value for the given power rating.
+7.  Set the mosfet model name CMOSN as given in the library file, length as 180nm and vary the width till you get the exact Q point.
+8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. To get the V<sub>out</sub> as per the given value, vary the R<sub>D</sub> value.
+9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 1V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.Take the difference of V<sub>out1</sub> and V<sub>out2</sub> waveforms,and calculate the diffrential gain.Also note down for what value of input amplitude the distortion starts.
+10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
+
+### Calculation:
+* P=1mW\
+* I<sub>SS</sub> = P/V = 1mW/2V = 0.5mA.\
+* I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 = 0.25mA.\
+* V<sub>GS</sub> = V<sub>incm</sub> - V<sub>P</sub> = 1-0.4 = 0.6V.\
+* R<sub>D</sub> = V<sub>outcm</sub>-V<sub>DD</sub>/ I<sub>D</sub> = 1.1-2/0.25m = 3.6Kohm.\
+* R<sub>SS</sub> = V<sub>p</sub>/ I<sub>SS</sub> = 0.4/0.5m = 0.8Kohm.\
+* g<sub>m</sub> = 2I<sub>D</sub>/V<subOV</sub> = 2(0.25m)/0.6-0.36 = 2.08m.\
+* A<sub>V</sub> = -g<sub>m</sub>R<sub>D</sub> = -2.08m(3.6K) = 7.488V/V.\
+* A<sub>V</sub>dB = 20log(A<sub>V</sub>) = 20log(7.488) = 17.48.\
+* V<sub>incm(min)</sub> = V<sub>TH</sub> + V<sub>P</sub> = 0.36 + 0.4 = 0.76V.\
+* V<sub>incm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> + V<sub>TH</sub> = 2-(0.25m)(3.6K)+0.36 = 1.46V.\
+* imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub> = 0.7V.\
+* V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> = 0.64V.\
+* V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> = 1.1V.\
+* output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 
