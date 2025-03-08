@@ -137,6 +137,7 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 ### Simulation Result :
 1. DC analysis:
 ![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
+
    
 * V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
 * I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.
@@ -162,8 +163,9 @@ Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as l
 <br>
 
 3. AC analysis :
-   
-  * 3dB gain bandwidth = 0 to 9.03GHz.
+   ![Image](https://github.com/user-attachments/assets/35511c29-551f-4d5a-98a5-3e63091e768c)
+  * 3dB Gain= 16.5dB
+  * 3dB gain bandwidth = 0 to 3.839GHz.
   * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
 
 <br>
@@ -184,11 +186,13 @@ Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as l
 |        Parameters      |     theoritical      |      simulation    |
 |------------------------|----------------------|--------------------|
 |     I<sub>SS</sub>     |       0.5mA          |      0.5mA         |
+|     I<sub>D</sub>      |       0.25mA         |      0.25mA        |
 |     R<sub>D</sub>      |       3.6Kohm        |      3.600010Kohm  |
 |     R<sub>SS</sub>     |       0.8Kohm        |      0.8Kohm       |
 |      V<sub>GS</sub>    |        0.6V          |      0.6V          |
+|      V<sub>Th</sub>    |        0.3662V       |     0.497V         |
 |      g<sub>m</sub>     |        2.08m         |      4.5m          |
-|   A<sub>V</sub> (v/V   |        7.488         |       16.2         |
+|        gain(V/V)       |        7.488         |      17.46         |
 
    
 <br>
@@ -261,4 +265,5 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
   * A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
 Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
 
-
+3. AC analysis:
+   
