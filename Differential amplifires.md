@@ -160,11 +160,15 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
   * output peak to peak voltage = 1.766V.
   * A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
 Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
+
 <br>
+
 ***To Calculate Output maximum swing***
 ![Image](https://github.com/user-attachments/assets/c77ccf10-fecb-4d6a-8b14-d78866e5b8bc)
 Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
+
 <br>
+
 3. AC analysis :
    ![Image](https://github.com/user-attachments/assets/35511c29-551f-4d5a-98a5-3e63091e768c)
   * 3dB Gain= 16.5dB
