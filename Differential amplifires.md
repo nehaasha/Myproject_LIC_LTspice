@@ -4,15 +4,60 @@
 Design differential amplifier for the following specifications. V<sub>DD</sub>=2V,  P<=1mW,   V<sub>icm</sub> =1V,  v<sub>ocm</sub> =1.1V,  V<sub>P</sub> =0.4V. Perform DC analysis, Transient analysis and frequency response and extract the required parameters for all types of circuits.
 
 ### Theory:
-A differential amplifier is a fundamental building block in analog circuits, used for amplifying the difference between two input signals while rejecting common-mode signals. When implemented using NMOS transistors, it forms the input stage of operational amplifiers, sensor interfaces, and communication circuits.
+A differential amplifier is a fundamental building block in analog circuits, that uses two identical MOSFETs for amplifying the difference between two input signals while rejecting common-mode signals. When implemented using NMOS transistors, it forms the input stage of operational amplifiers, sensor interfaces, and communication circuits.
 
 <br>
 The NMOS differential amplifier offers high gain, excellent noise rejection, and linearity. It is widely used in analog and mixed-signal applications such as instrumentation amplifiers and high-speed data converters.
 <br>
 
-The NMOS differential amplifier consists of two identical NMOS transistors (M1 and M2) connected in a symmetrical configuration using a resistor (R<sub>SS</sub>) as the tail bias making the circuit more dependent on input common-mode voltage variations. This results in a lower Common-Mode Rejection Ratio (CMRR) compared to the ideal current-source configuration.To maintain the better stability, higher gain  we would use current source or a mosfet instead of resistor.All these maintains the constant cuurents throughout the circuits. It operates by modulating the drain currents of the transistors based on the difference in their gate voltages. The circuit can be analyzed using DC analysis, transient analysis, and AC analysis to determine its performance. To work in the active region, the transistor must satisfy the condition V<sub>DS</sub> > (V<sub>GS</sub>-V<sub>TH</sub>).
-
+The NMOS differential amplifier consists of two identical NMOS transistors (M1 and M2) connected in a symmetrical configuration. To work in the saturation region, the transistor must satisfy the condition V<sub>DS</sub> > (V<sub>GS</sub>-V<sub>TH</sub>).
 <br>
+### Working principle of Differential amplifiers:
+* The circuit typically consists of two identical MOSFETs with a common-source connection.
+* The two input signals are applied to the gate terminals of the MOSFETs, while the source terminals are connected to a common current source.
+* When a differential voltage (i.e., difference in input voltages) is applied, the MOSFETs conduct different currents, causing a voltage difference at the drain terminals. This difference is then amplified and available as the output.
+* If the two input signals are identical (common-mode voltage), both MOSFETs will conduct equally, and the output voltage will be zero, canceling out any noise or interference.
+* The output voltage is directly proportional to the difference in input voltages, making it highly effective for noise rejection and differential signal amplification.
+  <br>
+  
+Basically, A differential amplifier in common mode operation is designed to reject any common signal or noise present at both input terminals and provide minimal output. In common mode input, the same voltage is applied to both input terminals, i.e., V<sub>in1</sub> = V<sub>in2</sub> = V<sub>cm</sub>. Ideally, the differential amplifier should produce zero output because the difference between the inputs is zero  V<sub>in1</sub> - V<sub>in2</sub> = 0. V<sub>out1</sub> = V<sub>out2</sub> = V<sub>DD</sub>-I<sub>D</sub>R<sub>D</sub> = V<sub>D1</sub> = V<sub>D2</sub>. When V<sub>D1</sub> - V<sub>D2</sub> = 0, V<sub>in1</sub> = V<sub>in2</sub>. For saturation region Drain current will be I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L (V<sub>GS</sub>-V<sub>TH</sub>)<sup>2</sup>.A higher CMRR indicates better noise rejection capability. For the amplifier to effectively reject common mode signals, it must have matched transistors, identical load resistors, and a constant tail current. In an ideal case, the common mode gain should be zero, ensuring complete noise rejection. However, practically, there will be a small common mode output due to mismatched components or thermal variations.\
+* Vincm(min) = VTH + VP ,to find minimum input common mode voltage
+* Vincm(max) = VDD - IDRD + VTH ,to find maximum input common mode voltage
+* imput max swing = Vincm(min) - Vincm(max)
+* Voutcm(min) = VOV + Vp ,to find minimum output common mode voltage
+* Voutcm(max) = VDD - IDRD ,,to find maximum input common mode voltage
+* output max swing = Voutcm(min) - Voutcm(max)
+<br>
+
+### Types of Diffrential Amplifier:
+ 1. Differential Amplifier with Resistor Load :
+ * Provides a stable voltage drop and acts as a load.
+ * Simple design, low cost.
+ * Stabilizes biasing.
+ * Low voltage gain.
+ * Poor Common Mode Rejection Ratio (CMRR).
+ * High power dissipation in the load resistor.
+    <br>
+
+ 2. Differential Amplifier with Current Source Load (Tail Current Source):
+ * Higher voltage gain compared to resistor load.
+ * Improved CMRR.
+ * Provides stable and balanced output.
+ * Requires a stable current source.
+ * Design complexity increases.
+ * Temperature drift may affect the current source.
+<br>
+
+ 3. Differential Amplifier with MOSFET:
+ * Provides extremely high voltage gain.
+ * High CMRR and linearity.
+ * Very low power consumption.
+ * Complex circuit design.
+ * Requires perfect current matching between MOSFETs.
+    
+<br>
+
+### Analysing the Circuit:
 
 1. **DC analysis** : DC analysis determines the biasing conditions of the transistors, ensuring that they operate in the saturation region for proper amplification.\
 The total bias current is split equally between the two transistors:  <br>           I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2 \
@@ -44,7 +89,7 @@ Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both trans
 13. output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub>
 
 ### circuit 1:
-![Image](https://github.com/user-attachments/assets/34ddbb5e-9243-4838-b228-da4f71b0baa5)
+
 
 ## components -
 Resistors (3.600050k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
