@@ -135,9 +135,9 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 |19.3625um |        0.25mA        |      1.1V        |      0.4V    |
 
 ### Simulation Result :
-1. DC analysis:
-![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
-
+1. DC analysis:\
+  ![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
+  ![Image](https://github.com/user-attachments/assets/626b570b-4369-4982-82cf-cca7081c483b)
    
 * V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
 * I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.
@@ -192,7 +192,7 @@ Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as l
 |      V<sub>GS</sub>    |        0.6V          |      0.6V          |
 |      V<sub>Th</sub>    |        0.3662V       |     0.497V         |
 |      g<sub>m</sub>     |        2.08m         |      4.5m          |
-|        gain(V/V)       |        7.488         |      17.46         |
+|        gain(V/V)       |        7.488         |      17.66         |
 
    
 <br>
