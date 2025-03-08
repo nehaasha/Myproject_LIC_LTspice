@@ -88,15 +88,15 @@ Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both trans
 12. V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub>
 13. output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub>
 
-### circuit 1:
-
+### circuit 1:(with R<sub>SS</sub>)
+![Image](https://github.com/user-attachments/assets/008010cf-91f4-4acb-8ef9-00a71464b45a)
 
 ## components -
-Resistors (3.600050k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
+Resistors (3.600010k and 0.8k ohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
 
 ### Procedure:
 1. Build the common source amplifier circuit as the circuit diagram using LTspice.
-2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600050Kohm and R<sub>SS</sub> value as 0.8Kohm, DC voltage as 2V, input common mode volatge as 1V.
+2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600010Kohm and R<sub>SS</sub> value as 0.8Kohm, DC voltage as 2V, input common mode volatge as 1V.
 3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
 4. Create a folder. Save the library file and LTspice file to the folder.
 5. Import the library file to LTspice using spice directive(.op).
@@ -124,19 +124,19 @@ V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> = 1.1V.\
 output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 
 ### Tabular Column:
-|   Width  | CurrentI<sub>D</sub> | V<sub>out</sub>  |
-|----------|----------------------|------------------|
-|    16um  |       0.243uA        |      1.12382V    |
-|    17um  |       0.245uA        |      1.11613V    |
-|    18um  |       0.245uA        |      1.10898V    |
-|    19um  |        0.249uA       |      1.1023V     |
-|   19.1um |        0.249uA       |      1.10166V    |
-|  19.33um |        0.249uA       |      1.10019V    |
-|  19.36um |        0.249mA       |      1.1V        |
+|   Width  | CurrentI<sub>D</sub> | V<sub>out</sub>  | V<sub>P</sub>|
+|----------|----------------------|------------------|--------------|
+|    16um  |       0.243379uA     |      1.12382V    |    0.38906   |  
+|    18um  |       0.247503uA     |      1.10899V    |   0.396004V  |
+|    19um  |       0.249357uA     |      1.10231V    |   0.398971V  |
+|  19.1um  |        0.249536uA    |      1.10167V    |   0.399257V  |
+|   19.3um |        0.24989uA     |      1.10039V    |  0.399824V   |
+|  19.36um |        0.249996uA    |      1.10001V    |   0.399993V  |
+|19.3625um |        0.25mA        |      1.1V        |      0.4V    |
 
 ### Simulation Result :
 1. DC analysis:
-   ![Image](https://github.com/user-attachments/assets/ac6894cb-b152-45b3-9136-272200414433)
+   
 V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.\
 I<sub>D</sub> = 0.249mA which satisfy the condition P<=1mW.\
 sub>P</sub> = 0.399992V.\
