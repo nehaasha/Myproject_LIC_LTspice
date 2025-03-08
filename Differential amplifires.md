@@ -138,31 +138,32 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 1. DC analysis:
 ![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
    
-* V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.\
-* I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.\
-* V<sub>P</sub> = 0.4V.\
-* I<sub>SS</sub> = 0.5mA.\
+* V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
+* I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.
+* V<sub>P</sub> = 0.4V.
+* I<sub>SS</sub> = 0.5mA.
 * Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
 
 <br>
 
-2. Transient Analysis: 
-   
-   * For input peak to peak volatge 200mV.
-   * Distortion occurs
+2. Transient Analysis: for Vin= 1V.
+   ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
+  * For input peak to peak volatge 200mV.
+  * Distortion occurs
 
 ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
 
   
   * input peak to peak voltage = 100mV (linear amplifier range).
-  * output peak to peak voltage = 1.766V.\
+  * output peak to peak voltage = 1.766V.
   * A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
+Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
 
 <br>
 
 3. AC analysis :
-   ![Image](https://github.com/user-attachments/assets/917cf5b9-a1d3-4060-9f55-7f5e3b9ba969)
-  * 3dB gain bandwidth = 0 to 9.03GHz.\
+   
+  * 3dB gain bandwidth = 0 to 9.03GHz.
   * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
 
 <br>
@@ -226,4 +227,38 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 * V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> = 0.64V.\
 * V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> = 1.1V.\
 * output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
+
+### Tabular Column:
+|   Width  | CurrentI<sub>D</sub> | V<sub>out</sub>  | V<sub>P</sub>|
+|----------|----------------------|------------------|--------------|
+|    16um  |       0.243379uA     |      1.12382V    |    0.38906   |  
+|    18um  |       0.247503uA     |      1.10899V    |   0.396004V  |
+|    19um  |       0.249357uA     |      1.10231V    |   0.398971V  |
+|  19.1um  |        0.249536uA    |      1.10167V    |   0.399257V  |
+|   19.3um |        0.24989uA     |      1.10039V    |  0.399824V   |
+|  19.36um |        0.249996uA    |      1.10001V    |   0.399993V  |
+|19.3625um |        0.25mA        |      1.1V        |      0.4V    |
+
+### Simulation Result :
+1. DC analysis:
+ ![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
+   
+* V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
+* I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.
+* V<sub>P</sub> = 0.4V.
+* I<sub>SS</sub> = 0.5mA.
+* Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
+
+2. Transient Analysis: for Vin= 1V.
+   ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
+  * For input peak to peak volatge 200mV.
+  * Distortion occurs
+
+![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
+
+  * input peak to peak voltage = 100mV (linear amplifier range).
+  * output peak to peak voltage = 1.766V.
+  * A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
+Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
+
 
