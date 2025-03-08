@@ -136,12 +136,13 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 
 ### Simulation Result :
 1. DC analysis:
+![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
    
-V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.\
-I<sub>D</sub> = 0.249mA which satisfy the condition P<=1mW.\
-sub>P</sub> = 0.399992V.\
-I<sub>SS</sub> = 0.499991mA.\
-Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.249mA)
+<br>V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.\
+I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.\
+V<sub>P</sub> = 0.4V.\
+I<sub>SS</sub> = 0.5mA.\
+Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
 
 <br>
 
@@ -167,7 +168,7 @@ Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.249mA)
 2. To get the expected output vary R<sub>D</sub> value inversly.
 3. Mosfet should be in the saturation region.
 4. Both the transistors and resistors should be identical.
-5. By connecting both the transistors to a single R<sub>SS<sub> , current is kept constant. ultimately this type of connection helps to maintain the constant current throughout the circuit by acting as a feedback network even if there are any small changes in the current flowing through the transistors.
+5. By connecting both the transistors to a single R<sub>SS</sub>, current is kept constant. ultimately this type of connection helps to maintain the constant current throughout the circuit by acting as a feedback network even if there are any small changes in the current flowing through the transistors.
 6. Noise cancelation which is CMRR that is it will cancel the noise by taking the difference of input signals by cancelling the common mode signals.
 7. from dc analysis we get operating point,dirfferential gain, maximum input and output swing.
 8. form transient analysis we get input and output peak to peak values so that we can calculate the gain of the circuit.
@@ -177,12 +178,12 @@ Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.249mA)
 
 |        Parameters      |     theoritical      |      simulation    |
 |------------------------|----------------------|--------------------|
-|     I<sub>SS</sub>     |       0.5mA          |      0.499991mA    |
-|     R<sub>D</sub>      |       3.6Kohm        |      3.600050Kohm  |
+|     I<sub>SS</sub>     |       0.5mA          |      0.5mA         |
+|     R<sub>D</sub>      |       3.6Kohm        |      3.600010Kohm  |
 |     R<sub>SS</sub>     |       0.8Kohm        |      0.8Kohm       |
 |      V<sub>GS</sub>    |        0.6V          |      0.6V          |
-|      g<sub>m</sub>     |        2.08m         |      2.12m         |
-|      A<sub>V</sub>     |        7.488         |      7.63V         |
+|      g<sub>m</sub>     |        2.08m         |      4.5m          |
+|   A<sub>V</sub> (v/V   |        7.488         |       16.2         |
 
    
    
