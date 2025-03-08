@@ -88,7 +88,7 @@ Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both trans
 12. V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub>
 13. output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub>
 
-### circuit 1:(with R<sub>SS</sub>)
+## circuit 1:(with R<sub>SS</sub>)
 ![Image](https://github.com/user-attachments/assets/008010cf-91f4-4acb-8ef9-00a71464b45a)
 
 ## components -
@@ -138,28 +138,34 @@ output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> = 0.46V.\
 1. DC analysis:
 ![Image](https://github.com/user-attachments/assets/c7feb8d3-8a85-40c0-8d7e-d33e7593b04f)
    
-<br>V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.\
-I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.\
-V<sub>P</sub> = 0.4V.\
-I<sub>SS</sub> = 0.5mA.\
-Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
+* V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.\
+* I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.\
+* V<sub>P</sub> = 0.4V.\
+* I<sub>SS</sub> = 0.5mA.\
+* Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
 
 <br>
 
 2. Transient Analysis:
+   ![Image](https://github.com/user-attachments/assets/5b1fcd5d-fe3b-4047-a886-7a5fd72c4f6c)
+<br>
+
+*  Distrotion Starts for 80mV input amplitude.
+  <br>
+  
    ![Image](https://github.com/user-attachments/assets/39327a19-6ad4-40b5-a40f-0db8f9bb3aa3)
 
-   Distortion starts for 250mV input amplitude.\
-   input peak to peak voltage = 100mV.\
-   output peak to peak voltage = 1.766V.\
-   A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
+  
+  * input peak to peak voltage = 100mV (linear amplifier range).
+  * output peak to peak voltage = 1.766V.\
+  * A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
 
 <br>
 
 3. AC analysis :
    ![Image](https://github.com/user-attachments/assets/917cf5b9-a1d3-4060-9f55-7f5e3b9ba969)
-   3dB gain = 0 to 9.03GHz.\
-   CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+  * 3dB gain = 0 to 9.03GHz.\
+  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
 
 <br>
 
@@ -186,4 +192,8 @@ Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
 |   A<sub>V</sub> (v/V   |        7.488         |       16.2         |
 
    
-   
+<br>
+
+## Circuit 2 (Current source) :
+
+
