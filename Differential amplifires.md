@@ -171,6 +171,7 @@ Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as l
 ![Image](https://github.com/user-attachments/assets/c77ccf10-fecb-4d6a-8b14-d78866e5b8bc)
 Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
 
+
 <br>
 
 3.AC analysis :
