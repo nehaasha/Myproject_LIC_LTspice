@@ -169,7 +169,13 @@ Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as l
 
 ***To Calculate Output maximum swing***
 ![Image](https://github.com/user-attachments/assets/c77ccf10-fecb-4d6a-8b14-d78866e5b8bc)
-Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
+Here the Output is started from 1.0991V to 1.5358V. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
+<br>
+
+![Image](https://github.com/user-attachments/assets/88e5a865-a6ff-472a-8f4d-5e5b01dbd6f3)
+Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
+<br>
+- The Differential Gain is given by maximum output swing/maximum input swing = 18.92dB.
 
 
 <br>
@@ -289,8 +295,18 @@ Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as l
 ***To Calculate Output maximum swing***
 ![Image](https://github.com/user-attachments/assets/c77ccf10-fecb-4d6a-8b14-d78866e5b8bc)
 Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
+<br>
+
+![Image](https://github.com/user-attachments/assets/88e5a865-a6ff-472a-8f4d-5e5b01dbd6f3)
+Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
+<br>
+- The Differential Gain is given by maximum output swing/maximum input swing = 18.92dB.
 
 <br>
 
-3.AC analysis:
+3.AC analysis:\
+ ![Image](https://github.com/user-attachments/assets/35511c29-551f-4d5a-98a5-3e63091e768c)
+  * 3dB Gain= 16.5dB
+  * 3dB gain bandwidth = 0 to 3.90GHz.
+  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
 
