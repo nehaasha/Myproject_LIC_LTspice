@@ -150,7 +150,7 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 * Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
 <br>
 
-2.Transient Analysis: for Vin= 1V.
+2.Transient Analysis: for Vin= 1V and varying input amplitude
    ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
 * input peak to peak volatge 200mV.
 * Distortion occurs
@@ -276,7 +276,7 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 
   <br>
 
-2.Transient Analysis: for Vin= 1V.
+2.Transient Analysis: for Vin= 1V and varying input amplitude.
    ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
 * For input peak to peak volatge 200mV.
 * Distortion occurs
@@ -305,8 +305,11 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 <br>
 
 3.AC analysis:\
- ![Image](https://github.com/user-attachments/assets/35511c29-551f-4d5a-98a5-3e63091e768c)
+ ![Image](https://github.com/user-attachments/assets/c4981b32-a038-4c58-bfd8-53ccbdce238b)
   * 3dB Gain= 16.5dB
   * 3dB gain bandwidth = 0 to 3.90GHz.
   * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+
+### Circuit 3 :
+
 
