@@ -184,7 +184,7 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
    ![Image](https://github.com/user-attachments/assets/35511c29-551f-4d5a-98a5-3e63091e768c)
   * 3dB Gain= 16.5dB
   * 3dB gain bandwidth = 0 to 3.839GHz.
-  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.5.
 
 <br>
 
