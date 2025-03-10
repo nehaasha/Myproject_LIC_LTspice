@@ -404,12 +404,12 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 
 <br>
 
-***To Calculate Output maximum swing***
+***To Calculate Input and Output maximum swing***
 
 Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
 <br>
 
-![Image](https://github.com/user-attachments/assets/88e5a865-a6ff-472a-8f4d-5e5b01dbd6f3)
+![Image](https://github.com/user-attachments/assets/b7201076-a409-474a-8349-0be26a449310)
 Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
 <br>
 - The Differential Gain is given by maximum output swing/maximum input swing = 18.92dB.
