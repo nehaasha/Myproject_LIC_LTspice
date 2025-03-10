@@ -413,9 +413,9 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 * Transistor is in cut off region.
 
   <br>
-
+![Image](https://github.com/user-attachments/assets/62ed5b52-c630-4a8c-82ea-6e30e2223fce)
 * input peak to peak volatge 2mV.
-* Transistor is in cut off region.
+* Distortion occurs.
 
   <br>
 
