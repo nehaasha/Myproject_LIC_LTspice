@@ -148,6 +148,8 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 * V<sub>P</sub> = 0.4V.
 * I<sub>SS</sub> = 0.5mA.
 * Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
+* Aspect ratio of M1 and M2 is 107.56
+  
 <br>
 
 2.Transient Analysis: for Vin= 1V and varying input amplitude
@@ -184,7 +186,7 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
    ![Image](https://github.com/user-attachments/assets/35511c29-551f-4d5a-98a5-3e63091e768c)
   * 3dB Gain= 16.5dB
   * 3dB gain bandwidth = 0 to 3.839GHz.
-  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.5.
+ 
 
 <br>
 
@@ -273,6 +275,7 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 * V<sub>P</sub> = 0.4V.
 * I<sub>SS</sub> = 0.5mA.
 * Q point = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
+* Aspect ratio of M1 and M2 is 107.56
 
   <br>
 
@@ -308,7 +311,19 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
  ![Image](https://github.com/user-attachments/assets/c4981b32-a038-4c58-bfd8-53ccbdce238b)
   * 3dB Gain= 16.5dB
   * 3dB gain bandwidth = 0 to 3.90GHz.
-  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+
+### comparision table:
+
+|        Parameters      |     theoritical      |      simulation    |
+|------------------------|----------------------|--------------------|
+|     I<sub>SS</sub>     |       0.5mA          |      0.5mA         |
+|     I<sub>D</sub>      |       0.25mA         |      0.25mA        |
+|     R<sub>D</sub>      |       3.6Kohm        |      3.600010Kohm  |
+|      V<sub>GS</sub>    |        0.6V          |      0.6V          |
+|      V<sub>Th</sub>    |        0.3662V       |     0.497V         |
+|      g<sub>m</sub>     |        2.08m         |      4.5m          |
+|        gain(V/V)       |        7.488         |      17.66         |
+
 
 ### Inference:
 1.current varies with respect to width.\
@@ -316,6 +331,7 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 3.Mosfet should be in the saturation region.\
 4.Both the transistors and resistors should be identical.\
 5.By connecting both the transistors to a single current source, current is kept constant. ultimately this type of connection helps to maintain the constant current throughout the circuit by acting as a feedback network even if there are any small changes in the current flowing through the transistors.\
+6.By connecting the current source instead of Rss the DC calculated parameters will wont change that is they remain same as in the circuit 1.
 6.Noise cancelation which is CMRR ,that is it will cancel the noise by taking the difference of input signals by cancelling the common mode signals is increases in this type of circuit\
 7.from dc analysis we get operating point,dirfferential gain, maximum input and output swing.\
 8.form transient analysis we get input and output peak to peak values so that we can calculate the gain of the circuit.\
@@ -339,7 +355,7 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 5. Import the library file to LTspice using spice directive(.op).\
 6. Find the current value for the given power rating.\
 7. Fix the Vb value of the mosfet such that all the three mosfet should be in the saturation region and get the expected calculated results while simulation (Vb<= Vp + Vth).\
-8.  Set the mosfet model name CMOSN as given in the library file, length as 180nm and vary the width till you get the exact Q point.Keep the width and length of differential amplifier mosfets and vary the aspect ratio of third mosfet to fix the designed values.\
+8.  Set the mosfet model name CMOSN as given in the library file, keep the same aspect ratio as it was in the circuit 1 and 2.vary the aspect ratio of third mosfet to get designed value and find the q point.\
 9. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. To get the V<sub>out</sub> as per the given value, vary the R<sub>D</sub> value.\
 10. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 1V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.Take the difference of V<sub>out1</sub> and V<sub>out2</sub> waveforms,and calculate the diffrential gain.Also note down for what value of input amplitude the distortion starts.\
 11. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.\
@@ -359,13 +375,13 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 * V<sub>incm(min)</sub> = V<sub>TH</sub> + V<sub>P</sub> = 0.36 + 0.4  <table><td>=0.76</td><table> 
 * V<sub>incm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> + V<sub>TH</sub> = 2-(0.25m)(3.6K)+0.36 <table><td>=1.46V</td><table> 
 * imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub> <table><td>=0.7V</td><table> 
-* V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> <table><td>=0.64V</td><table>
+* V<sub>outcm(min)</sub> = V<sub>OV1</sub> + V<sub>OV2</sub> <table><td>=0.373</td><table>
 * V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> <table><td>=1.1V</td><table> 
 * output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> <table><td>=0.46V</td><table>
 
 
 ### Tabular Column:
-|   Width  | CurrentI<sub>SS</sub> | V<sub>out</sub> |
+|Width(M3) | CurrentI<sub>SS</sub> | V<sub>out</sub> |
 |----------|----------------------|------------------|
 |    6um   |       0.338232mA     |      1.39118V    |      
 |    8um   |       0.443078mA     |      1.20246V    |   
@@ -387,9 +403,12 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 * I<sub>SS</sub> = 0.5mA.
 * Q point of M1 and M2 = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
 * Q point of M3 = (V<sub>DS</sub>, I<sub>SS</sub>) = (0.4V,0.5mA)
-
+* Aspect ratio of M1 and M2 is 107.56 ; M3 is 50.543
+  
+  <br>
+  
 2.Transient Analysis: for Vin= 1V and varying input amplitude.
-   ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
+  
 * input peak to peak volatge 0.2mV.
 * Transistor is in cut off region.
 
@@ -417,7 +436,70 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 <br>
 
 3.AC analysis:\
- 
-  * 3dB Gain= 16.5dB
-  * 3dB gain bandwidth = 0 to 3.90GHz.
-  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+ ![Image](https://github.com/user-attachments/assets/edc63f5a-1bce-49ed-a802-4926e9d2732a)
+  * 3dB Gain= 16.7dB
+  * 3dB gain bandwidth = 0 to 3.7132GHz.
+
+### comparision table:
+
+|        Parameters      |     theoritical      |      simulation    |
+|------------------------|----------------------|--------------------|
+|     I<sub>SS</sub>     |       0.5mA          |      0.5mA         |
+|     I<sub>D</sub>      |       0.25mA         |      0.25mA        |
+|     R<sub>D</sub>      |       3.6Kohm        |      3.600010Kohm  |
+|      V<sub>GS</sub>    |        0.6V          |      0.6V          |(for M3 0.76V)
+|      V<sub>Th</sub>    |        0.3662V       |     0.497V         |(for M3 0.498V)
+|      g<sub>m</sub>     |        2.08m         |      4.5m          |(for M3 3.09m)
+|        gain(V/V)       |        7.488         |      17.66         |(for M3 11.12)
+
+### Inference:
+1.current varies with respect to width.\
+2.To get the expected output vary R<sub>D</sub> value inversly.\
+3.Mosfet should be in the saturation region.\
+4.Both the transistors and resistors should be identical.\
+5.We should not change the aspect ratio of M1 and M2 because it is already designed to required q point, instead we need to change the aspect ratio of M3 which is replaced instead of current source to set the required q point and other parameters as calculated.\
+6.By connecting both the transistors to a Mosfet instead of a current source, current is kept constant. ultimately this type of connection helps to maintain the constant current Iss throughout the circuit along with increases the stability and gain of the circuit.\
+7.Noise cancelation which is CMRR ,that is it will cancel the noise by taking the difference of input signals by cancelling the common mode signals is increases in this type of circuit when compared to current source diffrential amplifier.\
+8.from dc analysis we get operating point,other parameters values, maximum input and output swing.\
+9.form transient analysis we get input and output peak to peak values so that we can calculate the gain of the circuit.\
+10.from ac analysis we get 3dB gain of the circuit.\
+11.The gain is slightly increased in this circuit and bandwidth is decreased when compared to the other 2 circuit.\
+12. This type of connection reduces the power consumption.\
+
+<br>
+
+### Overall Comparision Table: 
+
+|    Parameters       |      Circuit 1       |      Circuit 2      |             Circuit 3               |
+|---------------------|----------------------|---------------------|-------------------------------------| 
+|        width        |    19.3625um(M1&M2)  |    19.3625um(M1&M2) |  19.3625um(M11&M2); 9.09776um(M3)   |      
+|       Length        |        180nm         |       180nm         |               180nm                 |   
+|     I<sub>D</sub>   |        0.25mA        |       0.25mA        |               0.25mA                |   
+|    I<sub>SS</sub>   |         0.5mA        |        0.5mA        |               0.5mA                 |   
+|     V<sub>P</sub>   |        0.4V          |        0.4V         |               0.4V                  |  
+|      Stability      |         low          |     high that CRT1  |           high than CRT2            |   
+|     3db Gain        |       16.5dB         |        16.5dB       |                16.7dB               |   
+|    3db bandwidth    |      3.839GHz        |        3.839GHz     |               3.7132GHz             |
+|      gain           |       decrease       |     increase        |              increase               |
+|   bandwidth         |      increase        |     decrease        |              decrease               |
+|    linearity        | good at low frequency|    better           |              Moderate            |
+|    CMRR             |       low            |      high           |               high                  |
+
+
+<br>
+
+### Overall inference:
+* Dont make mistakes while giving values, for example we missed to put micrometer while varying width for M2 which led large changes in the output.
+* Always before start simulation save the file and give .op
+* While doing DC analysis all the parameters should be taken consideration.Even the values of some parameters are shown using Spice ERRORlog.
+* While doing Transient analysis difference of input and output should be taken to calculate the diffrential gain.
+* While doing ac analysis 3db gain and bandwidth should be observerd.
+* While replacing the resistor Rss with current source or the mosfet dont change the value of aspect ratio for M and M2 since you have already adjusted the Q Point, if you vary that Q point will be effected. So only change the M3 aspect ratio while doing mosfet connected differential amplifier.
+* If you vary the width, Current can be made set.If you vary the Rd value, Vout can be made set. So vary both to get required exact Q point.
+* Know the formula to derive the value manually so that it will help while doing the simulation.
+* In crt1 and crt2 the gain being the same indicates that the effective transconductance and the load resistance are similar in both cases.
+* Current source is used instead of resistor beacuse to maintain the constant current source throughout the circuit without any samll changes in the current. flowing and also it will increase the stability of the circuit .
+* Mosfet based differential circuit have slightly increased gain than the crt1 nad crt2 which indicated of the high stability.
+* Mosfet based differential circuit is highly preferable to use in ICs since it has high CMRR, draws minimal power, high gain, high input impedance.
+
+
