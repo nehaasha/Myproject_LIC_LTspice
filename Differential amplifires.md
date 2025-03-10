@@ -224,7 +224,7 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 ### Procedure : 
 
 1.Build the common source amplifier circuit as the circuit diagram using LTspice.\
-2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600010Kohm and R<sub>SS</sub> value as 0.8Kohm, DC voltage as 2V, input common mode volatge as 1V.\
+2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600010Kohm and R<sub>SS</sub> value as 0.8Kohm, DC voltage as 2V, input common mode volatge as 1V,and replace Rss by current source with o.5mA value.\
 3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)\
 4. Create a folder. Save the library file and LTspice file to the folder.\
 5. Import the library file to LTspice using spice directive(.op).\
@@ -309,6 +309,19 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
   * 3dB Gain= 16.5dB
   * 3dB gain bandwidth = 0 to 3.90GHz.
   * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
+
+### Inference:
+1.current varies with respect to width.\
+2.To get the expected output vary R<sub>D</sub> value inversly.\
+3.Mosfet should be in the saturation region.\
+4.Both the transistors and resistors should be identical.\
+5.By connecting both the transistors to a single current source, current is kept constant. ultimately this type of connection helps to maintain the constant current throughout the circuit by acting as a feedback network even if there are any small changes in the current flowing through the transistors.\
+6.Noise cancelation which is CMRR ,that is it will cancel the noise by taking the difference of input signals by cancelling the common mode signals is increases in this type of circuit\
+7.from dc analysis we get operating point,dirfferential gain, maximum input and output swing.\
+8.form transient analysis we get input and output peak to peak values so that we can calculate the gain of the circuit.\
+9.from ac analysis we get 3dB gain and CMRR of the circuit.\
+10.The gain will be nearly same as in the circuit with Rss but stability is increased in this circuit.
+
 
 ### Circuit 3 :
 
