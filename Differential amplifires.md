@@ -395,11 +395,26 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 
   <br>
 
-    
+    ![Image](https://github.com/user-attachments/assets/14602887-93ec-4258-adc6-59b2074e65a6)
 
 * input peak to peak voltage = 100mV (linear amplifier range).
-* output peak to peak voltage = 1.766V.
-* A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
-Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
+* output peak to peak voltage = 1.7692V.
+* A<sub>V</sub> = 1.792V/100mV = 0.01792m = 17.62V/V.
+ To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
 
 <br>
+
+***To Calculate Output maximum swing***
+
+Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
+<br>
+
+![Image](https://github.com/user-attachments/assets/88e5a865-a6ff-472a-8f4d-5e5b01dbd6f3)
+Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
+<br>
+- The Differential Gain is given by maximum output swing/maximum input swing = 18.92dB.
+3.AC analysis:\
+ ![Image](https://github.com/user-attachments/assets/c4981b32-a038-4c58-bfd8-53ccbdce238b)
+  * 3dB Gain= 16.5dB
+  * 3dB gain bandwidth = 0 to 3.90GHz.
+  * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
