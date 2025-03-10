@@ -278,7 +278,7 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 
 2.Transient Analysis: for Vin= 1V and varying input amplitude.
    ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
-* For input peak to peak volatge 200mV.
+* input peak to peak volatge 200mV.
 * Distortion occurs
 
   <br>
@@ -338,7 +338,7 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 4. Create a folder. Save the library file and LTspice file to the folder.\
 5. Import the library file to LTspice using spice directive(.op).\
 6. Find the current value for the given power rating.\
-7. Fix the Vb value of the mosfet such that all the three mosfet should be in the saturation region and Vb<= Vp + Vth.
+7. Fix the Vb value of the mosfet such that all the three mosfet should be in the saturation region and get the expected calculated results while simulation (Vb<= Vp + Vth).\
 8.  Set the mosfet model name CMOSN as given in the library file, length as 180nm and vary the width till you get the exact Q point.Keep the width and length of differential amplifier mosfets and vary the aspect ratio of third mosfet to fix the designed values.\
 9. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. To get the V<sub>out</sub> as per the given value, vary the R<sub>D</sub> value.\
 10. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 1V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.Take the difference of V<sub>out1</sub> and V<sub>out2</sub> waveforms,and calculate the diffrential gain.Also note down for what value of input amplitude the distortion starts.\
@@ -379,6 +379,27 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 ### Simulation Result :
 1.DC analysis:\
 ![Image](https://github.com/user-attachments/assets/9d6da6ae-5adb-4ae8-8c41-7ecd546bfd4b)
+![Image](https://github.com/user-attachments/assets/847d8ae1-9183-4816-b2f4-aedf1f4f79f7)
 
+* V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
+* I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.
+* V<sub>P</sub> = 0.4V.
+* I<sub>SS</sub> = 0.5mA.
+* Q point of M1 and M2 = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
+* Q point of M3 = (V<sub>DS</sub>, I<sub>SS</sub>) = (0.4V,0.5mA)
 
+2.Transient Analysis: for Vin= 1V and varying input amplitude.
+   ![Image](https://github.com/user-attachments/assets/e9078a2e-ed84-45d6-b0ee-c4747ab0f6e5)
+* input peak to peak volatge 0.2mV.
+* Transistor is in cut off region.
 
+  <br>
+
+    
+
+* input peak to peak voltage = 100mV (linear amplifier range).
+* output peak to peak voltage = 1.766V.
+* A<sub>V</sub> = 1.766V/100mV = 0.01766m = 17.66V/V.
+Hence if the Amplitude increases distortion ocuurs. To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
+
+<br>
