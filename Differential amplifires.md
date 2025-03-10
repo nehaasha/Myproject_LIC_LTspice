@@ -405,16 +405,19 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 <br>
 
 ***To Calculate Input and Output maximum swing***
-
-Here the Output is started from 1.0991V to 1.5358. Therefore the maximum output swing is 1.5358-1.0991=0.4367 which matches the theoritical value 0.46V.
+![Image](https://github.com/user-attachments/assets/43e49bb6-250e-4a99-847b-1e6e4b198fd1)
+Here the Output is started from 1.0967V to 1.5394. Therefore the maximum output swing is 1.5394-1.0967=0.4427 which matches the theoritical value 0.46V.
 <br>
 
 ![Image](https://github.com/user-attachments/assets/b7201076-a409-474a-8349-0be26a449310)
 Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
 <br>
-- The Differential Gain is given by maximum output swing/maximum input swing = 18.92dB.
+- The Differential Gain is given by maximum output swing/maximum input swing = 19dB.
+
+<br>
+
 3.AC analysis:\
- ![Image](https://github.com/user-attachments/assets/c4981b32-a038-4c58-bfd8-53ccbdce238b)
+ 
   * 3dB Gain= 16.5dB
   * 3dB gain bandwidth = 0 to 3.90GHz.
   * CMRR = Differential gain (g<sub>m</sub>R<sub>D</sub>) / Common mode gain (V<sub>out</sub>/V<sub>incm</sub>) = 12.54.
