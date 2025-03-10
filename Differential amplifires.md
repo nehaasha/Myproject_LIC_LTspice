@@ -408,11 +408,19 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
   <br>
   
 2.Transient Analysis: for Vin= 1V and varying input amplitude.
-  
+  ![Image](https://github.com/user-attachments/assets/9ba005bb-c6d5-439f-b813-4ba1ed52ea83)
 * input peak to peak volatge 0.2mV.
 * Transistor is in cut off region.
 
   <br>
+
+* input peak to peak volatge 2mV.
+* Transistor is in cut off region.
+
+  <br>
+
+* input peak to peak volatge 20mV.
+* Transistor is in cut off region.
 
     ![Image](https://github.com/user-attachments/assets/14602887-93ec-4258-adc6-59b2074e65a6)
 
