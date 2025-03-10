@@ -378,6 +378,7 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 
 ### Simulation Result :
 1.DC analysis:\
+![Image](https://github.com/user-attachments/assets/9d6da6ae-5adb-4ae8-8c41-7ecd546bfd4b)
 
 
 
