@@ -418,9 +418,9 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 * Distortion occurs.
 
   <br>
-
+![Image](https://github.com/user-attachments/assets/4214e88c-f1f7-4e3a-a710-9de78fccacb4)
 * input peak to peak volatge 20mV.
-* Transistor is in cut off region.
+* Distortion occurs.
 
     ![Image](https://github.com/user-attachments/assets/14602887-93ec-4258-adc6-59b2074e65a6)
 
@@ -507,6 +507,7 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 * Know the formula to derive the value manually so that it will help while doing the simulation.
 * In crt1 and crt2 the gain being the same indicates that the effective transconductance and the load resistance are similar in both cases.
 * Current source is used instead of resistor beacuse to maintain the constant current source throughout the circuit without any samll changes in the current. flowing and also it will increase the stability of the circuit .
+* Keep the Amplitude and input properly in the linear amplifier range orelse distortion occurs even transistor goes to cutoff region.
 * Mosfet based differential circuit have slightly increased gain than the crt1 nad crt2 which indicated of the high stability.
 * Mosfet based differential circuit is highly preferable to use in ICs since it has high CMRR, draws minimal power, high gain, high input impedance.
 
