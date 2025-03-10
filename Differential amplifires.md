@@ -95,7 +95,7 @@ Since V<sub>GS1</sub> = V<sub>GS2</sub> for a perfectly matched pair, both trans
 Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac ground, wires.
 
 ### Procedure:
-1. Build the common source amplifier circuit as the circuit diagram using LTspice.
+1. Build the circuit as per the circuit diagram using LTspice.
 2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600010Kohm and R<sub>SS</sub> value as 0.8Kohm, DC voltage as 2V, input common mode volatge as 1V.
 3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
 4. Create a folder. Save the library file and LTspice file to the folder.
@@ -223,8 +223,8 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 
 ### Procedure : 
 
-1.Build the common source amplifier circuit as the circuit diagram using LTspice.\
-2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600010Kohm and R<sub>SS</sub> value as 0.8Kohm, DC voltage as 2V, input common mode volatge as 1V,and replace Rss by current source with o.5mA value.\
+1.Build the circuit as per the circuit diagram using LTspice.\
+2. Set the Resistor R<sub>D(1,2)</sub> value as 3.600010Kohm, DC voltage as 2V, input common mode volatge as 1V,and replace Rss by current source with 0.5mA value.\
 3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)\
 4. Create a folder. Save the library file and LTspice file to the folder.\
 5. Import the library file to LTspice using spice directive(.op).\
@@ -324,5 +324,58 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 
 
 ### Circuit 3 :
+![Image](https://github.com/user-attachments/assets/ee9e862e-af3d-40ab-9b26-ec3d2a4d4846)
+<br>
 
+## components -
+Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground, wires.
+
+### Procedure : 
+
+1.Build the circuit as per the circuit diagram using LTspice.\
+2. Set the Resistor R<sub>D(1,2)</sub> value as 3.6Kohm , DC voltage as 2V, input common mode volatge as 1V,and replace  current source with NMOSFET.\
+3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)\
+4. Create a folder. Save the library file and LTspice file to the folder.\
+5. Import the library file to LTspice using spice directive(.op).\
+6. Find the current value for the given power rating.\
+7. Fix the Vb value of the mosfet such that all the three mosfet should be in the saturation region and Vb<= Vp + Vth.
+8.  Set the mosfet model name CMOSN as given in the library file, length as 180nm and vary the width till you get the exact Q point.Note that all the three mosfets should have same length and width value.\
+9. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. To get the V<sub>out</sub> as per the given value, vary the R<sub>D</sub> value.\
+10. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 1V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.Take the difference of V<sub>out1</sub> and V<sub>out2</sub> waveforms,and calculate the diffrential gain.Also note down for what value of input amplitude the distortion starts.\
+11. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.\
+
+### Calculation:
+* P=1mW
+* I<sub>SS</sub> = P/V = 1mW/2V  <table><td>=0.5mA</td><table>
+  
+* I<sub>D1</sub> = I<sub>D2</sub> = I<sub>SS</sub>/2  <table><td>=0.25mA</td><table> 
+* V<sub>GS</sub> = V<sub>incm</sub> - V<sub>P</sub> = 1-0.4  <table><td>=0.6V</td><table>
+* V<sub>b</sub> <= V<sub>P</sub> + V<sub>TH</sub> = 0.4+0.366 <table><td>=0.76V</td><table>
+* R<sub>D</sub> = V<sub>outcm</sub>-V<sub>DD</sub>/ I<sub>D</sub> = 1.1-2/0.25m <table><td>=3.6Kohm</td><table> 
+* R<sub>SS</sub> = V<sub>p</sub>/ I<sub>SS</sub> = 0.4/0.5m <table><td>=0.8Kohm</td><table> 
+* g<sub>m</sub> = 2I<sub>D</sub>/V<subOV</sub> = 2(0.25m)/0.6-0.36 <table><td>=2.08m</td><table>
+* A<sub>V</sub> = -g<sub>m</sub>R<sub>D</sub> = -2.08m(3.6K) <table><td>=7.488V/V</td><table> 
+* A<sub>V</sub>dB = 20log(A<sub>V</sub>) = 20log(7.488) <table><td>=17.48</td><table>
+* V<sub>incm(min)</sub> = V<sub>TH</sub> + V<sub>P</sub> = 0.36 + 0.4  <table><td>=0.76</td><table> 
+* V<sub>incm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> + V<sub>TH</sub> = 2-(0.25m)(3.6K)+0.36 <table><td>=1.46V</td><table> 
+* imput max swing = V<sub>incm(min)</sub> - V<sub>incm(max)</sub> <table><td>=0.7V</td><table> 
+* V<sub>outcm(min)</sub> = V<sub>OV</sub> + V<sub>p</sub> <table><td>=0.64V</td><table>
+* V<sub>outcm(max)</sub> = V<sub>DD</sub> - I<sub>D</sub>R<sub>D</sub> <table><td>=1.1V</td><table> 
+* output max swing = V<sub>outcm(min)</sub> - V<sub>outcm(max)</sub> <table><td>=0.46V</td><table>
+
+
+### Tabular Column:
+|   Width  | CurrentI<sub>SS</sub> | V<sub>out</sub>  |
+|----------|----------------------|------------------|
+|    6um  |       0.326822uA     |      1.41172V    |      
+|    8um  |       0.430581uA     |      1.22495V    |   
+|    9um  |       0.482258uA     |      1.13194V    |   
+|  9.3um  |        0.497731uA    |      1.10408V    |   
+|   9.34um |        0.499793uA    |      1.10037V    |  
+|  9.344um |        0.499999uA    |      1.1V        |   
+|9.34401um |        0.5mA         |      1.1V        |   
+
+
+### Simulation Result :
+1.DC analysis:\
 
