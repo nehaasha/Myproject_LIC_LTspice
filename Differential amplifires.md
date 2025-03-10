@@ -127,12 +127,12 @@ Resistors (3.600010kohm -2 and 0.8k ohm- 1, NMOSFET - 2, supply volatges(2V and 
 ### Tabular Column:
 |   Width  | CurrentI<sub>D</sub> | V<sub>out</sub>  | V<sub>P</sub>|
 |----------|----------------------|------------------|--------------|
-|    16um  |       0.243379uA     |      1.12382V    |    0.38906   |  
-|    18um  |       0.247503uA     |      1.10899V    |   0.396004V  |
-|    19um  |       0.249357uA     |      1.10231V    |   0.398971V  |
-|  19.1um  |        0.249536uA    |      1.10167V    |   0.399257V  |
-|   19.3um |        0.24989uA     |      1.10039V    |  0.399824V   |
-|  19.36um |        0.249996uA    |      1.10001V    |   0.399993V  |
+|    16um  |       0.243379mA     |      1.12382V    |    0.38906   |  
+|    18um  |       0.247503mA     |      1.10899V    |   0.396004V  |
+|    19um  |       0.249357mA     |      1.10231V    |   0.398971V  |
+|  19.1um  |        0.249536mA    |      1.10167V    |   0.399257V  |
+|   19.3um |        0.24989mA     |      1.10039V    |  0.399824V   |
+|  19.36um |        0.249996mA    |      1.10001V    |   0.399993V  |
 |19.3625um |        0.25mA        |      1.1V        |      0.4V    |
 
 <br>
@@ -255,12 +255,12 @@ Resistors (3.600010kohm) - 2, NMOSFET - 2, supply volatges(2V and 1V) - 3, ac gr
 ### Tabular Column:
 |   Width  | CurrentI<sub>D</sub> | V<sub>out</sub>  | V<sub>P</sub>|
 |----------|----------------------|------------------|--------------|
-|    16um  |       0.243379uA     |      1.12382V    |    0.38906   |  
-|    18um  |       0.247503uA     |      1.10899V    |   0.396004V  |
-|    19um  |       0.249357uA     |      1.10231V    |   0.398971V  |
-|  19.1um  |        0.249536uA    |      1.10167V    |   0.399257V  |
-|   19.3um |        0.24989uA     |      1.10039V    |  0.399824V   |
-|  19.36um |        0.249996uA    |      1.10001V    |   0.399993V  |
+|    16um  |       0.243379mA     |      1.12382V    |    0.38906   |  
+|    18um  |       0.247503mA     |      1.10899V    |   0.396004V  |
+|    19um  |       0.249357mA     |      1.10231V    |   0.398971V  |
+|  19.1um  |        0.249536mA    |      1.10167V    |   0.399257V  |
+|   19.3um |        0.24989mA     |      1.10039V    |  0.399824V   |
+|  19.36um |        0.249996mA    |      1.10001V    |   0.399993V  |
 |19.3625um |        0.25mA        |      1.1V        |      0.4V    |
 
 ### Simulation Result :
@@ -324,7 +324,7 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 
 
 ### Circuit 3 :
-
+![Image](https://github.com/user-attachments/assets/01fb5d56-0bd2-4dbd-aa3e-00f26d4da2cc)
 <br>
 
 ## components -
@@ -339,7 +339,7 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 5. Import the library file to LTspice using spice directive(.op).\
 6. Find the current value for the given power rating.\
 7. Fix the Vb value of the mosfet such that all the three mosfet should be in the saturation region and Vb<= Vp + Vth.
-8.  Set the mosfet model name CMOSN as given in the library file, length as 180nm and vary the width till you get the exact Q point.Note that all the three mosfets should have same length and width value.\
+8.  Set the mosfet model name CMOSN as given in the library file, length as 180nm and vary the width till you get the exact Q point.Keep the width and length of differential amplifier mosfets and vary the aspect ratio of third mosfet to fix the designed values.\
 9. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. To get the V<sub>out</sub> as per the given value, vary the R<sub>D</sub> value.\
 10. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 1V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.Take the difference of V<sub>out1</sub> and V<sub>out2</sub> waveforms,and calculate the diffrential gain.Also note down for what value of input amplitude the distortion starts.\
 11. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.\
@@ -365,18 +365,19 @@ Resistors (3.6kohm) - 2, NMOSFET - 3, supply volatges(2V and 1V) - 3, ac ground,
 
 
 ### Tabular Column:
-|   Width  | CurrentI<sub>SS</sub> | V<sub>out</sub>  |
+|   Width  | CurrentI<sub>SS</sub> | V<sub>out</sub> |
 |----------|----------------------|------------------|
-|    6um  |       0.326822uA     |      1.41172V    |      
-|    8um  |       0.430581uA     |      1.22495V    |   
-|    9um  |       0.482258uA     |      1.13194V    |   
-|  9.3um  |        0.497731uA    |      1.10408V    |   
-|   9.34um |        0.499793uA    |      1.10037V    |  
-|  9.344um |        0.499999uA    |      1.1V        |   
-|9.34401um |        0.5mA         |      1.1V        |   
+|    6um   |       0.338232mA     |      1.39118V    |      
+|    8um   |       0.443078mA     |      1.20246V    |   
+|    9um   |       0.49495mA      |      1.10909V    |   
+|  9.01um  |        0.495467mA    |      1.10816V    |   
+|   9.05um |        0.497533mA    |      1.10444V    |  
+|  9.09um  |        0.4996mA      |      1.10072V    |   
+|9.09776um |        0.5mA         |      1.1V        |   
 
 
 ### Simulation Result :
 1.DC analysis:\
-![Image](https://github.com/user-attachments/assets/ee9e862e-af3d-40ab-9b26-ec3d2a4d4846)
+
+
 
