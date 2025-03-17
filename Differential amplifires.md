@@ -515,3 +515,6 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 
 ### Circuit 4
 
+
+## components -
+PMOSFET - 2, NMOSFET - 3, supply volatges(2V,  1V), ac ground, wires.
