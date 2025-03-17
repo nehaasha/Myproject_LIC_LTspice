@@ -569,11 +569,17 @@ Here the Output is started from 1.0967V to 1.5394. Therefore the maximum output 
 ![Image](https://github.com/user-attachments/assets/abb8d3bc-6787-427d-9928-09e7fc1b0d05)
 Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
 <br>
-- The Differential Gain is given by maximum output swing/maximum input swing = 19dB.
+- The Differential Gain is given by maximum output swing/maximum input swing = 4.8.
 
 <br>
 
 3.AC analysis:\
- 
+ ![Image](https://github.com/user-attachments/assets/3a455ff4-75d8-4391-a582-b9d583bd10d5)
   * 3dB Gain= 1dB
   * 3dB gain bandwidth = 0 to 11.061GHz.
+
+### Inference:
+* Vout should supposed to be 1.1V as per the design but got 1.27V duee to the channel length modulation and body effect.
+* Current is been perfectly matched.
+* Gain is lower when compared to previous circuit because Rout is lower than expected (due to channel-length modulation or parasitics).
+* keep the same aspect ratio for M1,M2,M4,M5 as it was in the circuit 1 and 2.vary the aspect ratio of third n-mosfet to get designed value and find the q point
