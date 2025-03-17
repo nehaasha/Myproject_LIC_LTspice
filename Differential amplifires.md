@@ -511,4 +511,7 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 * Mosfet based differential circuit have slightly increased gain than the crt1 nad crt2 which indicated of the high stability.
 * Mosfet based differential circuit is highly preferable to use in ICs since it has high CMRR, draws minimal power, high gain, high input impedance.
 
+<br>
+
+### Circuit 4
 
