@@ -552,21 +552,21 @@ PMOSFET - 2, NMOSFET - 3, supply volatges(2V,  1V), ac ground, wires.
   <br>
   
 2.Transient Analysis: 
-
+![Image](https://github.com/user-attachments/assets/10125fc5-a04e-477a-b709-425c1ec0eaca)
 
 * input peak to peak voltage = 100mV (linear amplifier range).
-* output peak to peak voltage = 1.7692V.
-* A<sub>V</sub> = 1.792V/100mV = 0.01792m = 17.62V/V.
+* output peak to peak voltage = 2.734V.
+* A<sub>V</sub> = 2.734V/100mV = 0.02734m = 27.34V/V.
  To maintain the circuit as linear amplifier set the input amplitude volatge and between minimum to maximum input common mode volatge properly otherwise circuit enters to cut off region and distortion occurs therefore it no longer will be the linear amplifier.
 
 <br>
 
 ***To Calculate Input and Output maximum swing***
-![Image](https://github.com/user-attachments/assets/43e49bb6-250e-4a99-847b-1e6e4b198fd1)
-Here the Output is started from 1.0967V to 1.5394. Therefore the maximum output swing is 1.5394-1.0967=0.4427 which matches the theoritical value 0.46V.
+
+Here the Output is started from 1.0967V to 1.5394. Therefore the maximum output swing is 1.3682-1.2790= 0.0892.
 <br>
 
-![Image](https://github.com/user-attachments/assets/b7201076-a409-474a-8349-0be26a449310)
+
 Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
 <br>
 - The Differential Gain is given by maximum output swing/maximum input swing = 19dB.
