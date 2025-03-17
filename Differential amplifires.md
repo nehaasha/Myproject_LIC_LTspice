@@ -537,34 +537,22 @@ PMOSFET - 2, NMOSFET - 3, supply volatges(2V,  1V), ac ground, wires.
 
 ### Simulation Result :
 1.DC analysis:\
+![Image](https://github.com/user-attachments/assets/47d4ae17-9bd8-4d5c-9436-233d73307d83)
 
+![Image](https://github.com/user-attachments/assets/c3adca3c-66c1-4291-903a-f70fde4dea2e)
 
-* V<sub>out1</sub> = V<sub><out2</sub> = 1.1V.
+* V<sub>out1</sub> = V<sub><out2</sub> = 1.27V.
 * I<sub>D</sub> = 0.25mA which satisfy the condition P<=1mW.
 * V<sub>P</sub> = 0.4V.
 * I<sub>SS</sub> = 0.5mA.
 * Q point of M1 and M2 = (V<sub>DS</sub>, I<sub>D</sub>) = (0.7V,0.25mA)
 * Q point of M3 = (V<sub>DS</sub>, I<sub>SS</sub>) = (0.4V,0.5mA)
-* Aspect ratio of M1 and M2 is 107.56 ; M3 is 50.543
+* Aspect ratio of M1, M2, M4, M5 is 107.56 ; M3 is 0.019.
   
   <br>
   
-2.Transient Analysis: for Vin= 1V and varying input amplitude.
-  ![Image](https://github.com/user-attachments/assets/9ba005bb-c6d5-439f-b813-4ba1ed52ea83)
-* input peak to peak volatge 0.2mV.
-* Transistor is in cut off region.
+2.Transient Analysis: 
 
-  <br>
-![Image](https://github.com/user-attachments/assets/62ed5b52-c630-4a8c-82ea-6e30e2223fce)
-* input peak to peak volatge 2mV.
-* Distortion occurs.
-
-  <br>
-![Image](https://github.com/user-attachments/assets/4214e88c-f1f7-4e3a-a710-9de78fccacb4)
-* input peak to peak volatge 20mV.
-* Distortion occurs.
-
-    ![Image](https://github.com/user-attachments/assets/14602887-93ec-4258-adc6-59b2074e65a6)
 
 * input peak to peak voltage = 100mV (linear amplifier range).
 * output peak to peak voltage = 1.7692V.
