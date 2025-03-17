@@ -562,11 +562,11 @@ PMOSFET - 2, NMOSFET - 3, supply volatges(2V,  1V), ac ground, wires.
 <br>
 
 ***To Calculate Input and Output maximum swing***
-
+![Image](https://github.com/user-attachments/assets/dda13289-cbaf-4a79-ad6f-4b5e5a1b7dd4)
 Here the Output is started from 1.0967V to 1.5394. Therefore the maximum output swing is 1.3682-1.2790= 0.0892.
 <br>
 
-
+![Image](https://github.com/user-attachments/assets/abb8d3bc-6787-427d-9928-09e7fc1b0d05)
 Here the input is started from 1V to 1.0494V. Therefore The maximum input swing is 0.0494V.
 <br>
 - The Differential Gain is given by maximum output swing/maximum input swing = 19dB.
@@ -574,6 +574,6 @@ Here the input is started from 1V to 1.0494V. Therefore The maximum input swing 
 <br>
 
 3.AC analysis:\
- ![Image](https://github.com/user-attachments/assets/edc63f5a-1bce-49ed-a802-4926e9d2732a)
-  * 3dB Gain= 16.7dB
-  * 3dB gain bandwidth = 0 to 3.7132GHz.
+ 
+  * 3dB Gain= 1dB
+  * 3dB gain bandwidth = 0 to 11.061GHz.
