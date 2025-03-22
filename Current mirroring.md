@@ -63,8 +63,8 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 1.Case 1: 180nm
 ![Image](https://github.com/user-attachments/assets/fef1b93f-5e4e-410a-877a-4675bce7aa96)
 
-PMOSFET = width is 180nm, Length is 10um\
-NMOSFET = width is 180nm, Length is 114.025um\
+PMOSFET = length is 180nm, width is 10um\
+NMOSFET = length is 180nm, width is 114.025um\
 V<sub>out</sub>= 0.967276V\
 V<sub>x</sub>= 0.967276V\
 I<sub>total</sub> = 0.277mA\
@@ -72,8 +72,8 @@ I<sub>total</sub> = 0.277mA\
 2.Case 2: 500nm
 ![Image](https://github.com/user-attachments/assets/54d86e54-5ccb-4043-9d74-c6aaf0379e79)
 
-PMOSFET = width is 500nm, Length is 10um\
-NMOSFET = width is 500nm, Length is 207.617um\
+PMOSFET = length is 500nm, width is 10um\
+NMOSFET = length is 500nm, width is 207.617um\
 V<sub>out</sub>= 0.644713V\
 V<sub>x</sub>= 0.644703V\
 I<sub>total</sub> = 0.277mA\
@@ -81,11 +81,22 @@ I<sub>total</sub> = 0.277mA\
 3.Case 3: 1umm
 ![Image](https://github.com/user-attachments/assets/301f9c59-7da5-4b5e-b553-28679c231c6b)
 
-PMOSFET = width is 1um, Length is 10um\
-NMOSFET = width is 1um, Length is 251.54um\
+PMOSFET = length is 1um, width is 10um\
+NMOSFET = length is 1um, width is 251.54um\
 V<sub>out</sub>= 0.293193V\
 V<sub>x</sub>=  0.293177V\
 I<sub>total</sub> = 0.277mA\
 
 ### Tabular column:
+|  Length  |            Width           |   V<sub>x</sub>  | V<sub>out</sub>  | I<sub>total</sub>|
+|----------|----------------------------|------------------|------------------|------------------|
+|   180nm  | pmos= 10u; nmos=114.025u   |    0.967276V     |     0.967276V    |    0.277mA       |
+|   500nm  | pmos= 10u; nmos=207.617u   |    0.644703V     |     0.644713V    |    0.277mA       |
+|    1um   | pmos= 10u; nmos=251.54u    |    0.293177V     |     0.293193V    |    0.277mA       |
+
+### Transient analysis:
+### AC analysis:
+1.Case 1:
+
+
 
