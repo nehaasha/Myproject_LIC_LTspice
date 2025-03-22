@@ -27,8 +27,16 @@ I<sub>total</sub> = power/Vdd
 <br>
 
 3. **Ac analysis** : AC analysis evaluates the small-signal gain, frequency response, and bandwidth of the differential amplifier.
-<br> 
+
+<br>
+
 ### Circuit 1:
+![Image](https://github.com/user-attachments/assets/ff0d4688-0a59-45a7-9b92-b7737bb2e189)
+
+### Components :
+PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
+
+### Procedure:
 
 
 
