@@ -85,7 +85,7 @@ PMOSFET = length is 1um, width is 10um\
 NMOSFET = length is 1um, width is 251.54um\
 V<sub>out</sub>= 0.293193V\
 V<sub>x</sub>=  0.293177V\
-I<sub>total</sub> = 0.277mA\
+I<sub>total</sub> = 0.277mA
 
 ### Tabular column:
 |  Length  |            Width           |   V<sub>x</sub>  | V<sub>out</sub>  | I<sub>total</sub>|
@@ -97,6 +97,9 @@ I<sub>total</sub> = 0.277mA\
 ### Transient analysis:
 ### AC analysis:
 1.Case 1:
-
+![Image](https://github.com/user-attachments/assets/930f7ecd-c47f-4642-a996-0b1da4b510a2)
+* 3dB gain = 27dB
+* 3dB bandwidth= 265.18509MHz
+2.Case 2:
 
 
