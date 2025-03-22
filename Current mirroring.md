@@ -69,3 +69,6 @@ V<sub>out</sub>= 0.967276V\
 V<sub>x</sub>= 0.967276V\
 I<sub>total</sub> = 0.277mA\
 
+2.Case 2: 500nm
+
+
