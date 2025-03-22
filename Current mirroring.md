@@ -61,4 +61,11 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 
 ### DC analysis:
 1.Case 1: 180nm
+![Image](https://github.com/user-attachments/assets/fef1b93f-5e4e-410a-877a-4675bce7aa96)
+
+PMOSFET = width is 180nm, Length is 10um\
+NMOSFET = width is 180nm, Length is 114.025um\
+V<sub>out</sub>= 0.967276V\
+V<sub>x</sub>= 0.967276V\
+I<sub>total</sub> = 0.277mA\
 
