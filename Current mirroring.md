@@ -79,3 +79,13 @@ V<sub>x</sub>= 0.644703V\
 I<sub>total</sub> = 0.277mA\
 
 3.Case 3: 1umm
+![Image](https://github.com/user-attachments/assets/301f9c59-7da5-4b5e-b553-28679c231c6b)
+
+PMOSFET = width is 1um, Length is 10um\
+NMOSFET = width is 1um, Length is 251.54um\
+V<sub>out</sub>= 0.293193V\
+V<sub>x</sub>=  0.293177V\
+I<sub>total</sub> = 0.277mA\
+
+### Tabular column:
+
