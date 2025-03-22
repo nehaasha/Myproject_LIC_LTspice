@@ -157,6 +157,7 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 
 ### DC analysis:
 1.Case 1: 180nm
+![Image](https://github.com/user-attachments/assets/035b9dd2-ffb3-46f0-bd5d-2d969f255fd4)
 
 PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm\
 NMOSFET = length is 180nm, width is 135.867um\
@@ -165,7 +166,7 @@ V<sub>x</sub>=  1.20934V\
 I<sub>total</sub> = 0.185mA\
 
 2.Case 2: 500nm
-
+![Image](https://github.com/user-attachments/assets/8335044c-f581-451c-a812-1930b087f9fc)
 
 PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
 NMOSFET = length is 500nm, width is 256.773um\
@@ -174,7 +175,7 @@ V<sub>x</sub>=  1.16085V\
 I<sub>total</sub> = 0.185mA\
 
 3.Case 3: 1umm
-
+![Image](https://github.com/user-attachments/assets/c8c33457-63b5-4718-9d2c-7c7fa2790d4f)
 
 PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
 NMOSFET = length is 1um, width is 307.294uum\
@@ -192,21 +193,21 @@ I<sub>total</sub> = 0.277mA
 ### Transient analysis:
 ### AC analysis:
 1.Case 1: 180nm
-![Image](https://github.com/user-attachments/assets/930f7ecd-c47f-4642-a996-0b1da4b510a2)
-* 3dB gain = 27dB
-* 3dB bandwidth= 265.18509MHz
+
+* 3dB gain = 26.212dB
+* 3dB bandwidth= 105.81654MHz
 
 <br>
 
 2.Case 2: 500nm
-![Image](https://github.com/user-attachments/assets/e2fd23ef-52a1-4385-a9bc-30a4c2a5e1f2)
-* 3dB gain = 36dB
-* 3dB bandwidth= 52.464564MHz
+
+* 3dB gain = 34.71dB
+* 3dB bandwidth= 29.731326MHz
 
 <br>
 
 3.Case 3: 1um
-![Image](https://github.com/user-attachments/assets/3678ebb6-9c12-4d7b-8492-cb5e70852461)
-* 3dB gain = 35.75dB
-* 3dB bandwidth= 39.494824MHz
+
+* 3dB gain = 37dB
+* 3dB bandwidth= 18.6247MHz
 
