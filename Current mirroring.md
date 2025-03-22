@@ -111,3 +111,102 @@ I<sub>total</sub> = 0.277mA
 <br>
 
 3.Case 3: 1um
+![Image](https://github.com/user-attachments/assets/3678ebb6-9c12-4d7b-8492-cb5e70852461)
+* 3dB gain = 35.75dB
+* 3dB bandwidth= 39.494824MHz
+
+### Inference:
+* Reference current is copied or mirrored for other two mosfets.The output currentis exactly equal to the reference current.
+* The output current remains the same regardless of the connected load, as long as the transistor stays in the saturation region
+* V<sub>x</sub> and V<sub>out</sub> will be same when current gets mirrored.
+* As length increases V<sub>x</sub> and V<sub>out</sub> decreases.
+* As gain increases bandwidth decreases.
+* As the refence current is 0.277mA and doing 1:1 ratio of current mirroring the Current must be copied of the same that is 0.277mA.
+
+<br>
+
+### Circuit 1: for 1:2 ratio
+![Image](https://github.com/user-attachments/assets/ff0d4688-0a59-45a7-9b92-b7737bb2e189)
+
+### Components :
+PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
+
+### Procedure:
+
+1. Build the circuit as per the circuit diagram using LTspice.
+2. Set the Vdd as 1.8V.
+3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
+4. Create a folder. Save the library file and LTspice file to the folder.
+5. Import the library file to LTspice using spice directive(.op).
+6. Find the current value for the given power rating.
+7.  Set the mosfet model name CMOSN for NMOSFET and CMOSP for PMOSFET as given in the library file, length as 180nm and vary the width  of NMOSFET till you get the exact Q point. Set the gate volatge of NMOSFET as 0.5V. 
+8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. Since we are doing current mirroring the current of both mosfets should be same as the reference current even the output also should match too. 
+9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.
+10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
+
+<br>
+
+### Calculations:
+* Power <= 1mW
+* Vdd = 1.8V
+* I<sub>total</sub> = power/Vdd = 1mW/1.8 = 55.5mA
+* I<sub>D</sub>= I<sub>total</sub>/3 = 0.185mA.
+* 1:2 ratio = 0.185mA : 0.37mA.
+
+<br>
+
+### DC analysis:
+1.Case 1: 180nm
+
+PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm\
+NMOSFET = length is 180nm, width is 135.867um\
+V<sub>out</sub>=  1.20094V\
+V<sub>x</sub>=  1.20934V\
+I<sub>total</sub> = 0.185mA\
+
+2.Case 2: 500nm
+
+
+PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
+NMOSFET = length is 500nm, width is 256.773um\
+V<sub>out</sub>=  1.15935V\
+V<sub>x</sub>=  1.16085V\
+I<sub>total</sub> = 0.185mA\
+
+3.Case 3: 1umm
+
+
+PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
+NMOSFET = length is 1um, width is 307.294uum\
+V<sub>out</sub>=  1.08026V\
+V<sub>x</sub>=  1.07969V\
+I<sub>total</sub> = 0.277mA
+
+### Tabular column:
+|  Length  |                Width            |   V<sub>x</sub>  | V<sub>out</sub> | I<sub>total</sub>|
+|----------|---------------------------------|------------------|-----------------|------------------|
+|   180nm  | pmos= 70u,140u; nmos=135.867um  |     1.20934V     |     1.20094V    | 0.185mA : 0.37mA |
+|   500nm  | pmos= 70u,140u; nmos=256.773um  |     1.16085V     |     1.15935V    | 0.185mA : 0.37mA |
+|    1um   | pmos= 70u,140u;nmos=307.294um   |    1.07969V      |     1.08026V    | 0.185mA : 0.37mA |
+
+### Transient analysis:
+### AC analysis:
+1.Case 1: 180nm
+![Image](https://github.com/user-attachments/assets/930f7ecd-c47f-4642-a996-0b1da4b510a2)
+* 3dB gain = 27dB
+* 3dB bandwidth= 265.18509MHz
+
+<br>
+
+2.Case 2: 500nm
+![Image](https://github.com/user-attachments/assets/e2fd23ef-52a1-4385-a9bc-30a4c2a5e1f2)
+* 3dB gain = 36dB
+* 3dB bandwidth= 52.464564MHz
+
+<br>
+
+3.Case 3: 1um
+![Image](https://github.com/user-attachments/assets/3678ebb6-9c12-4d7b-8492-cb5e70852461)
+* 3dB gain = 35.75dB
+* 3dB bandwidth= 39.494824MHz
+
