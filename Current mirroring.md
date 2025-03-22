@@ -30,7 +30,7 @@ I<sub>total</sub> = power/Vdd
 
 <br>
 
-### Circuit 1:
+### Circuit 1: for 1:1 ratio
 ![Image](https://github.com/user-attachments/assets/ff0d4688-0a59-45a7-9b92-b7737bb2e189)
 
 ### Components :
@@ -52,8 +52,13 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 <br>
 
 ### Calculations:
-* Power <= 1mW\
-* Vdd = 1.8V\
-* I<sub>total</sub> = power/Vdd = 1mW/1.8 = 55.5mA\
+* Power <= 1mW
+* Vdd = 1.8V
+* I<sub>total</sub> = power/Vdd = 1mW/1.8 = 55.5mA
 * I<sub>D</sub>= I<sub>total</sub>/2 = 0.2775mA.
+
+<br>
+
+### DC analysis:
+1.Case 1: 180nm
 
