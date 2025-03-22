@@ -70,5 +70,12 @@ V<sub>x</sub>= 0.967276V\
 I<sub>total</sub> = 0.277mA\
 
 2.Case 2: 500nm
+![Image](https://github.com/user-attachments/assets/54d86e54-5ccb-4043-9d74-c6aaf0379e79)
 
+PMOSFET = width is 500nm, Length is 10um\
+NMOSFET = width is 500nm, Length is 207.617um\
+V<sub>out</sub>= 0.644713V\
+V<sub>x</sub>= 0.644703V\
+I<sub>total</sub> = 0.277mA\
 
+3.Case 3: 1umm
