@@ -1,5 +1,5 @@
 # Experiment 6
-### Aim: Design and Analyze current mirror circuit as load active in amplifier circuit
+### Aim: Design and Analyze current mirror circuit as load active in amplifier circuit with Av>-10v/v, P<=1mW, Vdd=1.8V.
 ### Theory:
 + A current mirror is an analog circuit designed to copy a reference current from one branch to another while maintaining a constant and predictable output current. It is a fundamental building block in integrated circuits (ICs) and is widely used for biasing, voltage references, and current amplification in analog circuits. The key advantage of a current mirror is its ability to provide a stable current that is largely independent of voltage variations in the circuit.
 + The basic current mirror consists of two or more transistors with matched electrical characteristics. One transistor, called the reference transistor, is configured to establish a set current, while the other transistor, the output transistor, is designed to copy or "mirror" that current. If the transistors are identical and operate in the same conditions, their drain (or collector) currents will be equal, ensuring accurate current replication.
@@ -38,5 +38,14 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 
 ### Procedure:
 
-
+1. Build the circuit as per the circuit diagram using LTspice.
+2. Set the Vdd as 1.8V.
+3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
+4. Create a folder. Save the library file and LTspice file to the folder.
+5. Import the library file to LTspice using spice directive(.op).
+6. Find the current value for the given power rating.
+7.  Set the mosfet model name CMOSN for NMOSFET and CMOSP for PMOSFET as given in the library file, length as 180nm and vary the width  of NMOSFET till you get the exact Q point. Set the gate volatge of NMOSFET as 0.5V. 
+8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. Since we are doing current mirroring the current of both mosfets should be same as the reference current even the output also should match too. 
+9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.
+10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
 
