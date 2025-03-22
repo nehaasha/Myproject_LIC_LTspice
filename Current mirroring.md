@@ -11,3 +11,16 @@
 
 <br>
 
+### Analysing the Circuit:
+
+1. **DC analysis** : DC analysis determines the biasing conditions of the transistors, ensuring that they operate in the saturation region for proper amplification.\
+The total bias current is split equally between the two transistors:  <br>           I<sub>D1</sub> = I<sub>D2</sub>  \
+For a MOSFET operating in the saturation region, the drain current is given by:<br>  I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L (V<sub>GS</sub>-V<sub>TH</sub>)<sup>2</sup>\
+width is directly proportional to current I<sub>D</sub> .<br>
+I<sub></total><sub>= I<sub></ref><sub>+<Isub></x><sub> <br>
+I<sub></total><sub>= power/Vdd
+
+<br>
+
+
+
