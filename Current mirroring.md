@@ -49,3 +49,11 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
 
+<br>
+
+### Calculations:
+* Power <= 1mW\
+* Vdd = 1.8V\
+* I<sub>total</sub> = power/Vdd = 1mW/1.8 = 55.5mA\
+* I<sub>D</sub>= I<sub>total</sub>/2 = 0.2775mA.
+
