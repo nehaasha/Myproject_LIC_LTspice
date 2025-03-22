@@ -96,10 +96,18 @@ I<sub>total</sub> = 0.277mA
 
 ### Transient analysis:
 ### AC analysis:
-1.Case 1:
+1.Case 1: 180nm
 ![Image](https://github.com/user-attachments/assets/930f7ecd-c47f-4642-a996-0b1da4b510a2)
 * 3dB gain = 27dB
 * 3dB bandwidth= 265.18509MHz
-2.Case 2:
 
+<br>
 
+2.Case 2: 500nm
+![Image](https://github.com/user-attachments/assets/e2fd23ef-52a1-4385-a9bc-30a4c2a5e1f2)
+* 3dB gain = 36dB
+* 3dB bandwidth= 52.464564MHz
+
+<br>
+
+3.Case 3: 1um
