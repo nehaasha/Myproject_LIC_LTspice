@@ -46,7 +46,7 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 6. Find the current value for the given power rating.
 7.  Set the mosfet model name CMOSN for NMOSFET and CMOSP for PMOSFET as given in the library file, length as 180nm and vary the width  of NMOSFET till you get the exact Q point. Set the gate volatge of NMOSFET as 0.5V. 
 8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. Since we are doing current mirroring the current of both mosfets should be same as the reference current even the output also should match too. 
-9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.
+9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 1mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.find the maximum output swing.
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
 
 <br>
@@ -141,7 +141,7 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 6. Find the current value for the given power rating.
 7.  Set the mosfet model name CMOSN for NMOSFET and CMOSP for PMOSFET as given in the library file, length as 180nm and vary the width  of NMOSFET till you get the exact Q point. Set the gate volatge of NMOSFET as 0.5V. 
 8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. Since we are doing current mirroring the current of both mosfets should be same as the reference current even the output also should match too. 
-9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 50mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.
+9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 1mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.Find the maximum output swing.
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
 
 <br>
@@ -191,6 +191,8 @@ I<sub>total</sub> = 0.277mA
 |    1um   | pmos= 70u,140u;nmos=307.294um   |    1.07969V      |     1.08026V    | 0.185mA : 0.37mA |
 
 ### Transient analysis:
+1.Case 1:
+
 ### AC analysis:
 1.Case 1: 180nm
 ![Image](https://github.com/user-attachments/assets/b8b8ad2b-0b46-4004-a28f-6868b577305f)
