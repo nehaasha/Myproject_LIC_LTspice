@@ -273,4 +273,6 @@ I<sub>total</sub> = 0.277mA
 <br>
 
 ### Circuit 3: 
-### Aim : Design the diffrential amplifier having 
+### Aim : Design the diffrential amplifier having VDD=2V, P<=1mW, Vicm =1V as per the 3rd experiment and perform DC, Transient , AC analysis
+### Circuit Diagram:
+
