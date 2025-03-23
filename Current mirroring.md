@@ -59,6 +59,7 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 
 <br>
 
+### Simulation Results:
 ### DC analysis:
 1.Case 1: 180nm
 ![Image](https://github.com/user-attachments/assets/fef1b93f-5e4e-410a-877a-4675bce7aa96)
@@ -96,21 +97,21 @@ I<sub>total</sub> = 0.277mA
 
 ### Transient analysis:
 1.Case 1: 180nm
-
+![Image](https://github.com/user-attachments/assets/893a38ab-0455-4193-8bb9-052746ef2e42)
 * Peak to Peak volatge = 1.934V
 * Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.00847-0.36)+(0.5-0.36)= 2.29V
 
 <br>
 
 2.Case 2: 500nm
-
+![Image](https://github.com/user-attachments/assets/8786450e-c70e-4efd-8edf-bf6ba5d635ee)
 * Peak to Peak volatge = 1.28V
 * Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.00000907-0.36)+(0.5-0.36)= 2.29V
 
 <br>
 
 3.Case 3: 1um
-
+![Image](https://github.com/user-attachments/assets/e58a1237-fc27-4672-a463-ea0b2869f16f)
 * Peak to Peak volatge = 0.607V
 * Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(0.0000165-0.36)+(0.5-0.36)= 2.29V
 
@@ -143,7 +144,8 @@ I<sub>total</sub> = 0.277mA
 * As length increases V<sub>x</sub> and V<sub>out</sub> decreases.
 * As gain increases bandwidth decreases.
 * As the refence current is 0.277mA and doing 1:1 ratio of current mirroring the Current must be copied of the same that is 0.277mA.
-
+* In transient analysis we see the maximum output swing caused.
+  
 <br>
 
 ### Circuit 1: for 1:2 ratio
@@ -176,6 +178,7 @@ PMOSFET-2, NMOSFET- 1, supply volatage-2, current source-1.
 
 <br>
 
+### Simulation Results:
 ### DC analysis:
 1.Case 1: 180nm
 ![Image](https://github.com/user-attachments/assets/035b9dd2-ffb3-46f0-bd5d-2d969f255fd4)
@@ -251,3 +254,11 @@ I<sub>total</sub> = 0.277mA
 * 3dB gain = 37dB
 * 3dB bandwidth= 18.6247MHz
 
+### Inference:
+* Reference current is copied or mirrored for other two mosfets.The output currentis exactly equal to the reference current.
+* The output current remains the same regardless of the connected load, as long as the transistor stays in the saturation region
+* V<sub>x</sub> and V<sub>out</sub> will be same when current gets mirrored.
+* As length increases V<sub>x</sub> and V<sub>out</sub> decreases.
+* As gain increases bandwidth decreases.
+* As the refence current is 0.277mA and doing 1:2 ratio of current mirroring the Current must be copied of the same that is in the form of 0.185mA : 0.37mA..
+* In transient analysis we see the maximum output swing caused.
