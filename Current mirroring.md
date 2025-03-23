@@ -275,4 +275,58 @@ I<sub>total</sub> = 0.277mA
 ### Circuit 3: 
 ### Aim : Design the diffrential amplifier having VDD=2V, P<=1mW, Vicm =1V as per the 3rd experiment and perform DC, Transient , AC analysis
 ### Circuit Diagram:
+![Image](https://github.com/user-attachments/assets/7de06806-b2d7-444e-bb9c-d1d51266a55b)
 
+### Components:
+PMOSFET-2, NMOSFET- 4, supply volatage-4, current source-1, ground, wires.
+
+### Circuit overview:
+1.Differential Pair (M3, M4):
+* M3 and M4 form a differential pair using NMOS transistors.
+* They receive differential input signals and control the output voltage.
+
+<br>
+
+2.Active Load (M1, M2):
+* M1 and M2 are PMOS transistors serving as a current mirror load.
+* This helps in converting the differential input signal into a single-ended output.
+
+<br>
+
+3.Current Source (M5, M6, I1):
+* M6 is an NMOS transistor acting as a current source to bias the differential pair.
+* I1 (0.25 mA) sets the tail current, ensuring proper operation.
+
+<br>
+
+4.Biasing Voltages (V1, V2, V3, V5):
+* V1 and V2 (1V) provide gate biasing for M3 and M4.
+* V3 and V5 (2V) power the PMOS transistors and ensure proper operation.
+
+<br>
+  
+5.Output (Vout):
+* The output is taken from the common node of M2 and M4.
+* It provides an amplified voltage signal.
+
+<br>
+
+Working Principle:
+* The circuit functions as an operational amplifier, amplifying the difference between two input signals.
+* The current mirror load (M1, M2) ensures proper differential-to-single-ended conversion.
+* The biasing network (M5, M6, I1) stabilizes the operating point.
+
+<br>
+
+### Procedure:
+
+1. Build the circuit as per the circuit diagram using LTspice.
+2. Set the Vdd as 2V, input common mode voltage as 1V.
+3. Download the library file [tsmc018 (1).txt](https://github.com/user-attachments/files/18785407/tsmc018.1.txt)
+4. Create a folder. Save the library file and LTspice file to the folder.
+5. Import the library file to LTspice using spice directive(.op).
+6. Find the current value for the given power rating.
+7.  Set the mosfet model name CMOSN for NMOSFET and CMOSP for PMOSFET as given in the library file, length as 180nm and vary the width  of NMOSFET i.e M3 and M4 till you get the exact Q point. Keep Current ratio of M1, M2 as 1:1, M5,M6 as 1:2, M3, M4 as 1:1.
+8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. Since we are doing current mirroring the current of both mosfets should be same as the reference current.Keep the reference current as per the calculated design specifications.
+9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 1mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.find the maximum output swing.
+10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
