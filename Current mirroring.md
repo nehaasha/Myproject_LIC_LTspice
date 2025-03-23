@@ -263,13 +263,6 @@ I<sub>ref</sub> = 0.277mA
 * As the refence current is 0.277mA and doing 1:2 ratio of current mirroring the Current must be copied of the same that is in the form of 0.185mA : 0.37mA..
 * In transient analysis we see the maximum output swing caused.
 
-### Comparison Table:
-|  Length  |                Width            |   V<sub>x</sub>  | V<sub>out</sub> | I<sub>total</sub>|
-|----------|---------------------------------|------------------|-----------------|------------------|
-|   180nm  | pmos= 70u,140u; nmos=135.867um  |     1.20934V     |     1.20094V    | 0.185mA : 0.37mA |
-|   500nm  | pmos= 70u,140u; nmos=256.773um  |     1.16085V     |     1.15935V    | 0.185mA : 0.37mA |
-|    1um   | pmos= 70u,140u;nmos=307.294um   |    1.07969V      |     1.08026V    | 0.185mA : 0.37mA |
-
 <br>
 
 ### Circuit 3: 
@@ -356,8 +349,6 @@ I<sub>ref</sub> = 0.277mA\
 
 2.Case 2: 500nm
 ![Image](https://github.com/user-attachments/assets/3758c1d6-f168-4892-91ca-c3368ab43649)
-![Image](https://github.com/user-attachments/assets/a0826da1-a2b2-4ee3-a1e5-16af57cfee7f)
-![Image](https://github.com/user-attachments/assets/bfde5367-9634-4c47-a2d4-4ff2beaa7833)
 
 PMOSFET 1,2 = width is 70um \
 M3, M4  = width is 693.6um\
@@ -368,8 +359,7 @@ I<sub>ref</sub> = 0.277mA\
 
 
 3.Case 3: 1umm
-![Image](https://github.com/user-attachments/assets/c8c33457-63b5-4718-9d2c-7c7fa2790d4f)
-
+![Image](https://github.com/user-attachments/assets/07adb460-ecdb-4b79-b823-a0dfdcd30d88)
 PMOSFET 1,2 = width is 70um \
 M3, M4  = width is 223.35um\
 M5 = width is 70um\
@@ -402,7 +392,7 @@ I<sub>ref</sub> = 0.277mA\
 <br>
 
 3.Case 3: 1um
-
+![Image](https://github.com/user-attachments/assets/ec39f371-69f9-4b0f-a4f9-3be8f3c5e2fe)
 * Peak to Peak volatge = 2.453V
 
 <br>
@@ -423,6 +413,39 @@ I<sub>ref</sub> = 0.277mA\
 <br>
 
 3.Case 3: 1um
-![Image](https://github.com/user-attachments/assets/2c44f1ca-d88d-4a11-ae5b-f0aff5c9ea2b)
+![Image](https://github.com/user-attachments/assets/c793da4a-112b-4a23-98f5-7703e02398a6)
 * 3dB gain = 43.32dB
 * 3dB bandwidth= 24.278305MHz
+
+<br>
+
+### Inference:
+
+1.DC Analysis:
+* As the transistor length increases, the output voltage (Vout) decreases.
+* This happens because longer channel lengths increase the resistance, affecting the current flow and voltage distribution.
+* Reference current (Iref) remains constant (0.277mA) across different lengths.
+* This shows that the current source (M5 & M6) is properly designed to maintain a steady bias.
+
+<br>
+
+2.Transient Analysis:
+* Peak-to-peak voltage (Vpp) decreases with increasing transistor length.
+* Longer transistors have higher parasitic capacitances, which slow down the signal response, reducing output swing.
+* Shorter channel transistors (180nm) provide better signal swings, making them preferable for high-speed applications.
+
+<br>
+
+
+3.AC Analysis:
+* 3dB Gain increases as transistor length increases.
+180nm → 32dB\
+500nm → 41.13dB\
+1µm → 43.32dB\
+* Longer transistors reduce channel-length modulation, leading to better gain performance.
+* Bandwidth decreases with increasing transistor length.
+180nm → 107.9MHz\
+500nm → 17.08MHz\
+1µm → 24.28MHz\
+* Shorter transistors have lower capacitance, allowing higher frequencies to pass, resulting in a wider bandwidth.
+
