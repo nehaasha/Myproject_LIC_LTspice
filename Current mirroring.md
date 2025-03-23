@@ -355,13 +355,15 @@ V<sub>out</sub>=  1.39017V\
 I<sub>ref</sub> = 0.277mA\
 
 2.Case 2: 500nm
-![Image](https://github.com/user-attachments/assets/8335044c-f581-451c-a812-1930b087f9fc)
+![Image](https://github.com/user-attachments/assets/3758c1d6-f168-4892-91ca-c3368ab43649)
+![Image](https://github.com/user-attachments/assets/a0826da1-a2b2-4ee3-a1e5-16af57cfee7f)
+![Image](https://github.com/user-attachments/assets/bfde5367-9634-4c47-a2d4-4ff2beaa7833)
 
 PMOSFET 1,2 = width is 70um \
-M3, M4  = width is 238.7um\
+M3, M4  = width is 693.6um\
 M5 = width is 70um\
 M6 = width is 140um\
-V<sub>out</sub>=  1.39017V\
+V<sub>out</sub>=  1.32674V\
 I<sub>ref</sub> = 0.277mA\
 
 
@@ -369,10 +371,10 @@ I<sub>ref</sub> = 0.277mA\
 ![Image](https://github.com/user-attachments/assets/c8c33457-63b5-4718-9d2c-7c7fa2790d4f)
 
 PMOSFET 1,2 = width is 70um \
-M3, M4  = width is 238.7um\
+M3, M4  = width is 223.35um\
 M5 = width is 70um\
-M6 = width is 140um\
-V<sub>out</sub>=  1.39017V\
+M6 = width is 141um\
+V<sub>out</sub>=   1.22711V\
 I<sub>ref</sub> = 0.277mA\
 
 <br>
@@ -381,8 +383,8 @@ I<sub>ref</sub> = 0.277mA\
 |  Length  |                       Width                   |  V<sub>out</sub> | I<sub>ref</sub>  |
 |----------|-----------------------------------------------|------------------|------------------|
 |   180nm  | M1,M2=70um,M3, M4 =238.7um,M5 =70um, M6=140um |      1.39017V    |  0.277mA         |
-|   500nm  | pmos= 70u,140u; nmos=256.773um                |      1.15935V    |  0.277mA         |
-|    1um   | pmos= 70u,140u;nmos=307.294um                 |      1.08026V    |  0.277mA         |
+|   500nm  | M1,M2=70um,M3, M4 =693.6um,M5 =70um, M6=140um |      1.32674V    |  0.277mA         |
+|    1um   | M1,M2=70um,M3, M4 =223.35um,M5 =70um, M6=141um|      1.22711V    |  0.277mA         |
 
 <br>
 
@@ -394,16 +396,14 @@ I<sub>ref</sub> = 0.277mA\
 <br>
 
 2.Case 2: 500nm
-![Image](https://github.com/user-attachments/assets/cc6165a4-5622-4568-9bfb-d315660a3fa5)
-* Peak to Peak volatge = 2.25V
-* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.0015-0.36)+(0.5-0.36)= 2.3015V
+![Image](https://github.com/user-attachments/assets/a0826da1-a2b2-4ee3-a1e5-16af57cfee7f)
+* Peak to Peak volatge = 2.653V
 
 <br>
 
 3.Case 3: 1um
-![Image](https://github.com/user-attachments/assets/a12f8b4f-703c-4cd3-b717-5f2250123bd7)
-* Peak to Peak volatge = 2.048V
-* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(0.000575-0.36)+(0.5-0.36)= 2.2V
+
+* Peak to Peak volatge = 2.453V
 
 <br>
 
@@ -416,7 +416,7 @@ I<sub>ref</sub> = 0.277mA\
 <br>
 
 2.Case 2: 500nm
-![Image](https://github.com/user-attachments/assets/7858a8fe-0311-4dd4-8c97-74cea3ade55d)
+![Image](https://github.com/user-attachments/assets/bfde5367-9634-4c47-a2d4-4ff2beaa7833)
 * 3dB gain = 41.131
 * 3dB bandwidth= 17.075083MHz
 
@@ -424,5 +424,5 @@ I<sub>ref</sub> = 0.277mA\
 
 3.Case 3: 1um
 ![Image](https://github.com/user-attachments/assets/2c44f1ca-d88d-4a11-ae5b-f0aff5c9ea2b)
-* 3dB gain = 37dB
-* 3dB bandwidth= 18.6247MHz
+* 3dB gain = 43.32dB
+* 3dB bandwidth= 24.278305MHz
