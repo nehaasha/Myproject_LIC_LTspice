@@ -388,9 +388,8 @@ I<sub>ref</sub> = 0.185mA\
 
 ### Transient analysis:
 1.Case 1: 180nm
-![Image](https://github.com/user-attachments/assets/8c284faf-3cc2-4d40-9825-6c3828aaa47a)
-* Peak to Peak volatge = 2.39V
-* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.00847-0.36)+(0.5-0.36)= 2.30V
+
+* Peak to Peak volatge = 2.7794V
 
 <br>
 
