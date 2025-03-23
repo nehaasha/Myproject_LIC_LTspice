@@ -352,7 +352,7 @@ M3, M4  = width is 238.7um\
 M5 = width is 70um\
 M6 = width is 140um\
 V<sub>out</sub>=  1.39017V\
-I<sub>ref</sub> = 0.185mA\
+I<sub>ref</sub> = 0.277mA\
 
 2.Case 2: 500nm
 ![Image](https://github.com/user-attachments/assets/8335044c-f581-451c-a812-1930b087f9fc)
@@ -362,7 +362,7 @@ M3, M4  = width is 238.7um\
 M5 = width is 70um\
 M6 = width is 140um\
 V<sub>out</sub>=  1.39017V\
-I<sub>ref</sub> = 0.185mA\
+I<sub>ref</sub> = 0.277mA\
 
 
 3.Case 3: 1umm
@@ -373,16 +373,16 @@ M3, M4  = width is 238.7um\
 M5 = width is 70um\
 M6 = width is 140um\
 V<sub>out</sub>=  1.39017V\
-I<sub>ref</sub> = 0.185mA\
+I<sub>ref</sub> = 0.277mA\
 
 <br>
 
-### Tabular column:
-|  Length  |                Width            |   V<sub>x</sub>  | V<sub>out</sub> | I<sub>ref</sub>  |
-|----------|---------------------------------|------------------|-----------------|------------------|
-|   180nm  | pmos= 70u,140u; nmos=135.867um  |     1.20934V     |     1.20094V    | 0.185mA : 0.37mA |
-|   500nm  | pmos= 70u,140u; nmos=256.773um  |     1.16085V     |     1.15935V    | 0.185mA : 0.37mA |
-|    1um   | pmos= 70u,140u;nmos=307.294um   |    1.07969V      |     1.08026V    | 0.185mA : 0.37mA |
+### Tabular column:  
+|  Length  |                       Width                   |  V<sub>out</sub> | I<sub>ref</sub>  |
+|----------|-----------------------------------------------|------------------|------------------|
+|   180nm  | M1,M2=70um,M3, M4 =238.7um,M5 =70um, M6=140um |      1.39017V    |  0.277mA         |
+|   500nm  | pmos= 70u,140u; nmos=256.773um                |      1.15935V    |  0.277mA         |
+|    1um   | pmos= 70u,140u;nmos=307.294um                 |      1.08026V    |  0.277mA         |
 
 <br>
 
@@ -405,9 +405,11 @@ I<sub>ref</sub> = 0.185mA\
 * Peak to Peak volatge = 2.048V
 * Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(0.000575-0.36)+(0.5-0.36)= 2.2V
 
+<br>
+
 ### AC analysis:
 1.Case 1: 180nm
-
+![Image](https://github.com/user-attachments/assets/d090373d-b863-4904-a226-598fdcc27d55)
 * 3dB gain = 32dB
 * 3dB bandwidth= 107.9033MHz
 
@@ -415,8 +417,8 @@ I<sub>ref</sub> = 0.185mA\
 
 2.Case 2: 500nm
 ![Image](https://github.com/user-attachments/assets/7858a8fe-0311-4dd4-8c97-74cea3ade55d)
-* 3dB gain = 34.71dB
-* 3dB bandwidth= 29.731326MHz
+* 3dB gain = 41.131
+* 3dB bandwidth= 17.075083MHz
 
 <br>
 
