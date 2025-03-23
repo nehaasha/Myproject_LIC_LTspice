@@ -95,6 +95,27 @@ I<sub>total</sub> = 0.277mA
 |    1um   | pmos= 10u; nmos=251.54u    |    0.293177V     |     0.293193V    |    0.277mA       |
 
 ### Transient analysis:
+1.Case 1: 180nm
+
+* Peak to Peak volatge = 1.934V
+* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.00847-0.36)+(0.5-0.36)= 2.29V
+
+<br>
+
+2.Case 2: 500nm
+
+* Peak to Peak volatge = 1.28V
+* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.00000907-0.36)+(0.5-0.36)= 2.29V
+
+<br>
+
+3.Case 3: 1um
+
+* Peak to Peak volatge = 0.607V
+* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(0.0000165-0.36)+(0.5-0.36)= 2.29V
+
+<br>
+
 ### AC analysis:
 1.Case 1: 180nm
 ![Image](https://github.com/user-attachments/assets/930f7ecd-c47f-4642-a996-0b1da4b510a2)
@@ -199,14 +220,14 @@ I<sub>total</sub> = 0.277mA
 <br>
 
 2.Case 2: 500nm
-
+![Image](https://github.com/user-attachments/assets/cc6165a4-5622-4568-9bfb-d315660a3fa5)
 * Peak to Peak volatge = 2.25V
 * Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.0015-0.36)+(0.5-0.36)= 2.3015V
 
 <br>
 
 3.Case 3: 1um
-
+![Image](https://github.com/user-attachments/assets/a12f8b4f-703c-4cd3-b717-5f2250123bd7)
 * Peak to Peak volatge = 2.048V
 * Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(0.000575-0.36)+(0.5-0.36)= 2.2V
 
