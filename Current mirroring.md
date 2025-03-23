@@ -68,7 +68,7 @@ PMOSFET = length is 180nm, width is 10um\
 NMOSFET = length is 180nm, width is 114.025um\
 V<sub>out</sub>= 0.967276V\
 V<sub>x</sub>= 0.967276V\
-I<sub>total</sub> = 0.277mA\
+I<sub>ref</sub> = 0.277mA\
 
 2.Case 2: 500nm
 ![Image](https://github.com/user-attachments/assets/54d86e54-5ccb-4043-9d74-c6aaf0379e79)
@@ -77,7 +77,7 @@ PMOSFET = length is 500nm, width is 10um\
 NMOSFET = length is 500nm, width is 207.617um\
 V<sub>out</sub>= 0.644713V\
 V<sub>x</sub>= 0.644703V\
-I<sub>total</sub> = 0.277mA\
+I<sub>ref</sub> = 0.277mA\
 
 3.Case 3: 1umm
 ![Image](https://github.com/user-attachments/assets/301f9c59-7da5-4b5e-b553-28679c231c6b)
@@ -86,10 +86,10 @@ PMOSFET = length is 1um, width is 10um\
 NMOSFET = length is 1um, width is 251.54um\
 V<sub>out</sub>= 0.293193V\
 V<sub>x</sub>=  0.293177V\
-I<sub>total</sub> = 0.277mA
+I<sub>ref</sub> = 0.277mA
 
 ### Tabular column:
-|  Length  |            Width           |   V<sub>x</sub>  | V<sub>out</sub>  | I<sub>total</sub>|
+|  Length  |            Width           |   V<sub>x</sub>  | V<sub>out</sub>  |   I<sub>ref</sub>|
 |----------|----------------------------|------------------|------------------|------------------|
 |   180nm  | pmos= 10u; nmos=114.025u   |    0.967276V     |     0.967276V    |    0.277mA       |
 |   500nm  | pmos= 10u; nmos=207.617u   |    0.644703V     |     0.644713V    |    0.277mA       |
@@ -187,7 +187,7 @@ PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm\
 NMOSFET = length is 180nm, width is 135.867um\
 V<sub>out</sub>=  1.20094V\
 V<sub>x</sub>=  1.20934V\
-I<sub>total</sub> = 0.185mA\
+I<sub>ref</sub> = 0.185mA\
 
 2.Case 2: 500nm
 ![Image](https://github.com/user-attachments/assets/8335044c-f581-451c-a812-1930b087f9fc)
@@ -196,7 +196,7 @@ PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
 NMOSFET = length is 500nm, width is 256.773um\
 V<sub>out</sub>=  1.15935V\
 V<sub>x</sub>=  1.16085V\
-I<sub>total</sub> = 0.185mA\
+I<sub>ref</sub> = 0.185mA\
 
 3.Case 3: 1umm
 ![Image](https://github.com/user-attachments/assets/c8c33457-63b5-4718-9d2c-7c7fa2790d4f)
@@ -205,10 +205,10 @@ PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
 NMOSFET = length is 1um, width is 307.294uum\
 V<sub>out</sub>=  1.08026V\
 V<sub>x</sub>=  1.07969V\
-I<sub>total</sub> = 0.277mA
+I<sub>ref</sub> = 0.277mA
 
 ### Tabular column:
-|  Length  |                Width            |   V<sub>x</sub>  | V<sub>out</sub> | I<sub>total</sub>|
+|  Length  |                Width            |   V<sub>x</sub>  | V<sub>out</sub> | I<sub>ref</sub>  |
 |----------|---------------------------------|------------------|-----------------|------------------|
 |   180nm  | pmos= 70u,140u; nmos=135.867um  |     1.20934V     |     1.20094V    | 0.185mA : 0.37mA |
 |   500nm  | pmos= 70u,140u; nmos=256.773um  |     1.16085V     |     1.15935V    | 0.185mA : 0.37mA |
@@ -345,28 +345,83 @@ Working Principle:
 ### Simulation Results:
 ### DC analysis:
 1.Case 1: 180nm
+![Image](https://github.com/user-attachments/assets/6472d2c3-037f-4b65-ba03-1e6e13b0f21c)
 
-
-PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm\
-NMOSFET = length is 180nm, width is 135.867um\
-V<sub>out</sub>=  1.20094V\
-V<sub>x</sub>=  1.20934V\
-I<sub>total</sub> = 0.185mA\
+PMOSFET 1,2 = width is 70um \
+M3, M4  = width is 238.7um\
+M5 = width is 70um\
+M6 = width is 140um\
+V<sub>out</sub>=  1.39017V\
+I<sub>ref</sub> = 0.185mA\
 
 2.Case 2: 500nm
 ![Image](https://github.com/user-attachments/assets/8335044c-f581-451c-a812-1930b087f9fc)
 
-PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
-NMOSFET = length is 500nm, width is 256.773um\
-V<sub>out</sub>=  1.15935V\
-V<sub>x</sub>=  1.16085V\
-I<sub>total</sub> = 0.185mA\
+PMOSFET 1,2 = width is 70um \
+M3, M4  = width is 238.7um\
+M5 = width is 70um\
+M6 = width is 140um\
+V<sub>out</sub>=  1.39017V\
+I<sub>ref</sub> = 0.185mA\
+
 
 3.Case 3: 1umm
 ![Image](https://github.com/user-attachments/assets/c8c33457-63b5-4718-9d2c-7c7fa2790d4f)
 
-PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
-NMOSFET = length is 1um, width is 307.294uum\
-V<sub>out</sub>=  1.08026V\
-V<sub>x</sub>=  1.07969V\
-I<sub>total</sub> = 0.277mA
+PMOSFET 1,2 = width is 70um \
+M3, M4  = width is 238.7um\
+M5 = width is 70um\
+M6 = width is 140um\
+V<sub>out</sub>=  1.39017V\
+I<sub>ref</sub> = 0.185mA\
+
+<br>
+
+### Tabular column:
+|  Length  |                Width            |   V<sub>x</sub>  | V<sub>out</sub> | I<sub>ref</sub>  |
+|----------|---------------------------------|------------------|-----------------|------------------|
+|   180nm  | pmos= 70u,140u; nmos=135.867um  |     1.20934V     |     1.20094V    | 0.185mA : 0.37mA |
+|   500nm  | pmos= 70u,140u; nmos=256.773um  |     1.16085V     |     1.15935V    | 0.185mA : 0.37mA |
+|    1um   | pmos= 70u,140u;nmos=307.294um   |    1.07969V      |     1.08026V    | 0.185mA : 0.37mA |
+
+<br>
+
+### Transient analysis:
+1.Case 1: 180nm
+![Image](https://github.com/user-attachments/assets/8c284faf-3cc2-4d40-9825-6c3828aaa47a)
+* Peak to Peak volatge = 2.39V
+* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.00847-0.36)+(0.5-0.36)= 2.30V
+
+<br>
+
+2.Case 2: 500nm
+![Image](https://github.com/user-attachments/assets/cc6165a4-5622-4568-9bfb-d315660a3fa5)
+* Peak to Peak volatge = 2.25V
+* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(-0.0015-0.36)+(0.5-0.36)= 2.3015V
+
+<br>
+
+3.Case 3: 1um
+![Image](https://github.com/user-attachments/assets/a12f8b4f-703c-4cd3-b717-5f2250123bd7)
+* Peak to Peak volatge = 2.048V
+* Maximum output swing = Vdd-Vov2+Vov3 = 1.8-(0.000575-0.36)+(0.5-0.36)= 2.2V
+
+### AC analysis:
+1.Case 1: 180nm
+![Image](https://github.com/user-attachments/assets/b8b8ad2b-0b46-4004-a28f-6868b577305f)
+* 3dB gain = 26.212dB
+* 3dB bandwidth= 105.81654MHz
+
+<br>
+
+2.Case 2: 500nm
+![Image](https://github.com/user-attachments/assets/7858a8fe-0311-4dd4-8c97-74cea3ade55d)
+* 3dB gain = 34.71dB
+* 3dB bandwidth= 29.731326MHz
+
+<br>
+
+3.Case 3: 1um
+![Image](https://github.com/user-attachments/assets/2c44f1ca-d88d-4a11-ae5b-f0aff5c9ea2b)
+* 3dB gain = 37dB
+* 3dB bandwidth= 18.6247MHz
