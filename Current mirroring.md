@@ -262,3 +262,15 @@ I<sub>total</sub> = 0.277mA
 * As gain increases bandwidth decreases.
 * As the refence current is 0.277mA and doing 1:2 ratio of current mirroring the Current must be copied of the same that is in the form of 0.185mA : 0.37mA..
 * In transient analysis we see the maximum output swing caused.
+
+### Comparison Table:
+|  Length  |                Width            |   V<sub>x</sub>  | V<sub>out</sub> | I<sub>total</sub>|
+|----------|---------------------------------|------------------|-----------------|------------------|
+|   180nm  | pmos= 70u,140u; nmos=135.867um  |     1.20934V     |     1.20094V    | 0.185mA : 0.37mA |
+|   500nm  | pmos= 70u,140u; nmos=256.773um  |     1.16085V     |     1.15935V    | 0.185mA : 0.37mA |
+|    1um   | pmos= 70u,140u;nmos=307.294um   |    1.07969V      |     1.08026V    | 0.185mA : 0.37mA |
+
+<br>
+
+### Circuit 3: 
+### Aim : Design the diffrential amplifier having 
