@@ -388,7 +388,7 @@ I<sub>ref</sub> = 0.185mA\
 
 ### Transient analysis:
 1.Case 1: 180nm
-
+![Image](https://github.com/user-attachments/assets/d1f8f534-fc52-464d-ab68-8d3d93f859bc)
 * Peak to Peak volatge = 2.7794V
 
 <br>
@@ -407,9 +407,9 @@ I<sub>ref</sub> = 0.185mA\
 
 ### AC analysis:
 1.Case 1: 180nm
-![Image](https://github.com/user-attachments/assets/b8b8ad2b-0b46-4004-a28f-6868b577305f)
-* 3dB gain = 26.212dB
-* 3dB bandwidth= 105.81654MHz
+
+* 3dB gain = 32dB
+* 3dB bandwidth= 107.9033MHz
 
 <br>
 
