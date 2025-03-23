@@ -330,3 +330,43 @@ Working Principle:
 8. DC analysis: In edit simulation option, change to dc offset to get list of values obtained from the circuit. We should get the calculated current value in the simulation result.So that we need to vary the value of width since width is directly proportional to Drain current(Id) keeping other parameters constant. Since we are doing current mirroring the current of both mosfets should be same as the reference current.Keep the reference current as per the calculated design specifications.
 9. Transient analysis: In edit simulation option, change from dc offset to transient. Set the dc offset as 0.5V, Amplitude 1mV, frequency 1KHz. Keep stop time for 3ms and run to get the expected waveform.find the maximum output swing.
 10. AC analysis : In edit simulation option, change from transient to ac analysis. Set type of sweep as decade, number of points per decade as 20, start and stop frequency as 0.1Hz and 1THz to get the expected ac waveform. Note down the 3dB gain of the circuit and its bandwidth.
+
+<br>
+
+### Calculation:
+* P=1mW
+* I<sub>total</sub> = P/V = 1mW/2V  <table><td>=0.5mA</td><table>
+* I<sub>D1</sub> = I<sub>D2</sub> = I<sub>total</sub>/2 = I<sub>ref</sub> <table><td>=0.25mA</td><table> 
+* V<sub>DD</sub>= 2V
+* V<sub>inCM</sub>=1V
+
+<br>
+
+### Simulation Results:
+### DC analysis:
+1.Case 1: 180nm
+
+
+PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm\
+NMOSFET = length is 180nm, width is 135.867um\
+V<sub>out</sub>=  1.20094V\
+V<sub>x</sub>=  1.20934V\
+I<sub>total</sub> = 0.185mA\
+
+2.Case 2: 500nm
+![Image](https://github.com/user-attachments/assets/8335044c-f581-451c-a812-1930b087f9fc)
+
+PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
+NMOSFET = length is 500nm, width is 256.773um\
+V<sub>out</sub>=  1.15935V\
+V<sub>x</sub>=  1.16085V\
+I<sub>total</sub> = 0.185mA\
+
+3.Case 3: 1umm
+![Image](https://github.com/user-attachments/assets/c8c33457-63b5-4718-9d2c-7c7fa2790d4f)
+
+PMOSFET 1 = length is 180nm, width is 70um : PMOSFET 2 = width is 140nm
+NMOSFET = length is 1um, width is 307.294uum\
+V<sub>out</sub>=  1.08026V\
+V<sub>x</sub>=  1.07969V\
+I<sub>total</sub> = 0.277mA
