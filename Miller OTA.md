@@ -20,11 +20,11 @@ Iref = 37uA
 R1=(1/gm6) ohms
 
 •	Cc>= 0.22CL
-Therefore, Cc = 3pF
+Therefore, Cc = 3pF\
 •	gm1= gm2= GBW*Cc* 2π = 94.2477uS
-ID1,2 = gm1,2 * Vov / 2 = 18.5uA
-(W/L)1,2= gm1,2/ (UnCox)n ID1 = 1.7147
-            W1,2= 0.8573um
+ID1,2 = gm1,2 * Vov / 2 = 18.5uA\
+(W/L)1,2= gm1,2/ (UnCox)n ID1 = 1.7147\
+            W1,2= 0.8573um\
 •	ICMR(max)=1.3V,ICMR(min)= 0.8V
 VSG3= VDD - ICMR(max) + Vth min            
        =  1.8 – 1.3 + 0.35
