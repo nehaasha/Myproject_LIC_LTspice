@@ -64,4 +64,6 @@ Channel length(L) of M1, M2, M6 = 0.5um and M3,M4,M5,M7,M8 = 1um
 |I 2nd stage = 188.5uA	| 188.39uA        |
 
 ### Result and Analysis-
+![Image](https://github.com/user-attachments/assets/85d5f285-b39f-4872-8d06-3eba38e8543b)
+### DC analysis:
 
