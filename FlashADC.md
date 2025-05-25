@@ -17,15 +17,27 @@ The final stage involves converting the thermometer code into a 3-bit binary out
  
 This structured, analog-centered design effectively demonstrates the practical implementation of Flash ADC architecture using discrete components. By combining linear resistor-based voltage division, high-gain comparator behavior, and logic-level encoding, the 3-bit Flash ADC exemplifies how analog concepts from LIC theory can be translated into a working, real-time data conversion system.
 ## 3Bit Flash ADC-
+
+![Image](https://github.com/user-attachments/assets/d8bb6c97-9be5-451d-ae93-d78eaa7f12e7)
+
 we have assumed the Power budget as 5 mW, V ref = 5V wkt Iref= Vref / Rtotal\
 Assume that the total ladder should have an impedance of 5 kΩ\
 Iref = 1mA , P = 5mW R = Rtotal / 2N\
-R = 625 Ω (Standard Value R= 680Ω)\
+R = 625 Ω (Standard Value R= 680Ω)
+
+![Image](https://github.com/user-attachments/assets/d8711611-ee9a-4f0f-b3bb-25322857e6cb)
+
 To generate seven discrete reference voltages (V1 through V7) for the comparator inputs of a 3-bit Flash ADC, a resistor ladder network consisting of eight identical resistors (R) is used. The reference voltage is assumed to be 5 V.\
 Total resistance across the ladder: Rtotal=8×R
 Voltage step across each node: Vstep=Vref /8 = 0.625V
-Using this step size, the individual node voltages are calculated as follows: \V1=5×7/8=4.375V\
-V2=5×6/8=3.75V \V3=5×5/8=3.125V \V4=5×4/8=2.5V\ V5=5×3/8=1.875V\ V6=5×2/8=1.25V \V7=5/8=0.625V\
+Using this step size, the individual node voltages are calculated as follows: \
+V1=5×7/8=4.375V\
+V2=5×6/8=3.75V \
+V3=5×5/8=3.125V \
+V4=5×4/8=2.5V\
+V5=5×3/8=1.875V\
+V6=5×2/8=1.25V \
+V7=5/8=0.625V\
 These voltages are supplied to the inverting terminals of the LM393 comparators. The analog input signal (Vin) is applied to the non-inverting terminals.
 ## Result-
 For a 3-bit Flash ADC, there are 23=8  levels and 7 comparators. Assume reference voltages are spaced like this: Let Vin = 2.8V
@@ -42,6 +54,8 @@ For a 3-bit Flash ADC, there are 23=8  levels and 7 comparators. Assume referenc
 C1 to C4 will output 1 because 2.8V > 0.625V, 2.8V > 1.25V, 2.8V > 1.875V and 2.8V > 2.5V.\
 C5 to C7 will output 0 because 2.8V < 3.125 is False for C5, and the rest are higher.\
 So, the comparator outputs will be: 1 1 1 1 0 0 Therefore, the digital output would be 100 in binary
+
+![Image](https://github.com/user-attachments/assets/20691ddd-6e29-4de1-bffd-ec328b0490f5)
 ## Discussion-
 The implemented 3-bit Flash Analog-to-Digital Converter (ADC) demonstrates the fundamental principles of high- speed data conversion using discrete analog and digital components. The key stages of the ADC—voltage reference generation, analog comparison, and binary encoding—were carefully designed to ensure reliable and accurate conversion.
 ### Voltage Range and Output Mapping
