@@ -19,30 +19,30 @@ P/V = 1m / 3.6V = 277 uA.
 Iref = 37uA
 R1=(1/gm6) ohms
 
-•	Cc>= 0.22CL
+•	Cc>= 0.22CL\
 Therefore, Cc = 3pF\
-•	gm1= gm2= GBW*Cc* 2π = 94.2477uS
+•	gm1= gm2= GBW*Cc* 2π = 94.2477uS\
 ID1,2 = gm1,2 * Vov / 2 = 18.5uA\
 (W/L)1,2= gm1,2/ (UnCox)n ID1 = 1.7147\
             W1,2= 0.8573um\
-•	ICMR(max)=1.3V,ICMR(min)= 0.8V
-VSG3= VDD - ICMR(max) + Vth min            
-       =  1.8 – 1.3 + 0.35
-       =   0.85V
-•	(W/L)3,4 = 2I3/ (UnCox)p(VSG3- Vth max)
-              =  2*18.5u/ 160u*(0.40)2
-    (W)3,4=  1.44u
-•	(W/L)5 = 2I5/ (UnCox)n(VD sat)2
-              =  0.4u
-          VD sat = ICMR(min) - VGS1
- Where, VGS1 = (2ID1/ Kn1*(W/L)1)1/2 - Vth max 
-•	gm6 >= 10gm1 = 942.47uS
-ID6 = gm6* Vov / 2 = 188.5uA
-•	(W/L)6 / (W/L)4 = gm6/ gm4
-(W/L)6 = 44.117
-•	I6/I4 = (W/L)6 /(W/L)4  
-W6= 22.05um
-•	(W/L)7 = I7/I5 * (W/L)5    -----( I7=I6 )
-                       =  188.5uA/ 37u
-                       =  5.09
+•	ICMR(max)=1.3V,ICMR(min)= 0.8V\
+VSG3= VDD - ICMR(max) + Vth min    \        
+       =  1.8 – 1.3 + 0.35\
+       =   0.85V\
+•	(W/L)3,4 = 2I3/ (UnCox)p(VSG3- Vth max)\
+              =  2*18.5u/ 160u*(0.40)2\
+    (W)3,4=  1.44u\
+•	(W/L)5 = 2I5/ (UnCox)n(VD sat)2\
+              =  0.4u\
+          VD sat = ICMR(min) - VGS1\
+ Where, VGS1 = (2ID1/ Kn1*(W/L)1)1/2 - Vth max \
+•	gm6 >= 10gm1 = 942.47uS\
+ID6 = gm6* Vov / 2 = 188.5uA\
+•	(W/L)6 / (W/L)4 = gm6/ gm4\
+(W/L)6 = 44.117\
+•	I6/I4 = (W/L)6 /(W/L)4  \
+W6= 22.05um\
+•	(W/L)7 = I7/I5 * (W/L)5    -----( I7=I6 )\
+                       =  188.5uA/ 37u\
+                       =  5.09\
                  W7 = 5.09um
