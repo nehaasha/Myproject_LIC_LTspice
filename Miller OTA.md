@@ -62,3 +62,6 @@ Channel length(L) of M1, M2, M6 = 0.5um and M3,M4,M5,M7,M8 = 1um
 |ID5 = 37uA	            | 36.9uA          |
 |Iref = 37uA	| 37uA            |
 |I 2nd stage = 188.5uA	| 188.39uA        |
+
+### Result and Analysis-
+
