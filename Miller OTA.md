@@ -46,3 +46,18 @@ W6= 22.05um\
                        =  188.5uA/ 37u\
                        =  5.09\
                  W7 = 5.09um
+### Theoritical and final values of parameters-
+Channel length(L) of M1, M2, M6 = 0.5um and M3,M4,M5,M7,M8 = 1um
+     Theoritical	      Practical
+M1=(0.86/0.5)um	(0.86/0.5)um
+M2=(0.86/0.5)um	(0.86/0.5)um
+M3=(1.44/1)um	(5/1)um
+M4=(1.44/1)um	(5/1)um
+M5=(0.4/1)um	(0.6/1)um
+M6=(22.05/0.5)um	(24/0.5)um
+M7=(5.09/1)um	(3.15/1)um
+M8=(0.4/1)um	(0.6/1)um
+ID1,2 = 18.5uA	18.46uA
+ID5 = 37uA	36.9uA
+Iref = 37uA	37uA
+I 2nd stage = 188.5uA	188.39uA
