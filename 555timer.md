@@ -129,7 +129,7 @@ Finally, when we triggered a monostable 555 with those edges, we got clean, unif
 
 # Simulation in Virtual Lab Astable Multivibrator
 ## Procedure:
-1.	Connect the components
+1.	Connect the components as mentioned below: L1-L12, L14-L12, L16-L12, L4-L9, L8-L9, L10-L19, L3-L17, L11-L13, L7-L19, L6-L13, L2-L13, L5-L15, L18-L9.(For eg. click on 1 and then drag to 12 and so on.)
 2.	Click on 'Check Connection' button to check the connections.
 3.	If connected wrong, click on the wrong connection. Else click on 'Delete all connection' button to erase all the connections.
 4.	Intially set R a=3.3 kΩ, R b=6.8kΩ, C=0.1µf, Vcc=5 V.
