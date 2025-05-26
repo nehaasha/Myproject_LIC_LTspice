@@ -72,6 +72,8 @@ A monostable multivibrator, also known as a one-shot, has only one stable state.
 ## Calculation
 ![Image](https://github.com/user-attachments/assets/89c5d22a-7882-4073-9da8-44bf00417cc7)
 
+![Image](https://github.com/user-attachments/assets/fd8d6f2e-97b6-40cd-afd4-b44923c067a2) 
+
 ## Circuit Diagram:
 ![image](https://github.com/user-attachments/assets/b07bcbbe-72dd-4548-a828-e1ff5dc9cebd)
 
