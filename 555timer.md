@@ -61,4 +61,12 @@ In a differentiator amplifier circuit, the positions of the capacitor and resist
 A clipper circuit is used to remove or "clip" specific portions of a waveform, such as negative voltage spikes. The output of this clipper circuit then serves as the trigger signal for a monostable multivibrator.   
 
 A monostable multivibrator, also known as a one-shot, has only one stable state. Its purpose is to generate a single output pulse of a specific width (either high or low) when an external trigger pulse is applied. This trigger pulse initiates a timing cycle, causing the output to change its state. The output then remains in this second, unstable state for a duration determined by the RC time constant of its capacitor (C) and resistor (R), after which it automatically reverts to its original stable state. It will stay in this stable state until another input signal is received. Monostable multivibrators are capable of producing much longer rectangular waveforms. The rising edge of the output waveform coincides with the external trigger pulse, while the falling (trailing) edge is governed by the RC time constant of the feedback components. This RC time constant can be adjusted over time to produce a series of pulses, each with a fixed time delay relative to the original triggered pulse.
+
 ## Procedure
+1.	Build the circuit as per the Circuit diagram.
+2.	Calculate the resistor R and capacitor C for Astable multivibrator Differentiator, clipper and Monostable multivibrator.
+3.	Analyze the capacitor charging and discharging Voltage per time.
+4.	Analyze the ton period when input is triggered.
+
+
+## Calculation
