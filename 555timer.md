@@ -70,3 +70,87 @@ A monostable multivibrator, also known as a one-shot, has only one stable state.
 
 
 ## Calculation
+![Image](https://github.com/user-attachments/assets/89c5d22a-7882-4073-9da8-44bf00417cc7)
+
+## Circuit Diagram:
+![image](https://github.com/user-attachments/assets/b07bcbbe-72dd-4548-a828-e1ff5dc9cebd)
+
+
+## Waveform
+### Case 1:
+![image](https://github.com/user-attachments/assets/bdcbd7d8-b042-44d8-a02f-16989a367a90)
+
+First wave is output of Astable Multivibrator, Second waveform is Output of Differentiator Circuit output, 3rd wave is the output of Negative Clipper circuit and fourth waveform is output of Monostable Multivibrator pulse width is 0.5ms.
+
+### Case 2:
+![image](https://github.com/user-attachments/assets/bb0dabe9-f63f-4be1-9e6b-fbbc78f23174)
+
+First wave is output of Astable Multivibrator, Second waveform is Output of Differentiator Circuit output, 3rd wave is the output of Negative Clipper circuit and fourth waveform is output of Monostable Multivibrator pulse width is 0.5ms.
+ cap value .1u
+
+ ### Case 3:
+
+ in case 3 the ton<toff which is not possible in astable Multivibrator , thus we can use an inverter to invert the pulse generated.
+ 
+![image](https://github.com/user-attachments/assets/62330045-4a0a-422d-b977-9699a629bb00)
+
+
+ ![image](https://github.com/user-attachments/assets/5974cd20-b140-48e9-b307-9e661e8e4906)
+
+
+
+First wave is output of inverted Astable Multivibrator, Second waveform is Output of Differentiator Circuit output, 3rd wave is the output of Negative Clipper circuit and fourth waveform is output of Monostable Multivibrator pulse width is 0.5ms.
+
+## Inference
+- Controlling ON and OFF Times Isn't Always Straightforward
+We saw that changing resistor and capacitor values lets us control how long the signal stays ON and OFF. But it’s not always possible to get any values we want with the basic 555 timer setup.
+
+- The 555 Timer Has Its Limits
+In some cases (like when OFF time needs to be longer than ON), the normal 555 astable circuit can’t give us the result directly. That’s why in Case 3, we had to flip the signal using an inverter.
+
+- Inverters Can Help Us Get the Waveform We Want
+By adding a simple NOT gate (built using a transistor), we were able to reverse the timing — this gave us more flexibility in generating the waveform we needed.
+
+- Very Short Pulses Need Precise Components
+In Case 2, we worked with very fast pulses (just fractions of a millisecond). To do that, we needed low resistor and capacitor values — which also showed us the importance of accuracy and how component selection affects timing.
+
+- We Can Detect Edges Using a Differentiator
+A differentiator circuit helped us catch the exact moment the signal goes from LOW to HIGH. This is useful when we only want to react to changes, not the full pulse.
+
+- Monostable 555 Gives Clean, Consistent Pulses
+Finally, when we triggered a monostable 555 with those edges, we got clean, uniform pulses every time. This is super helpful when we need a reliable output regardless of input width.
+
+| **Case** | **Configuration** | **What We Learned** |
+|----------|-------------------|----------------------|
+| **Case 1**<br>(ON = 0.2 ms, OFF = 0.3 ms) | Direct astable 555 output | Basic control of ON/OFF time using R1, R2, and C values works well within certain timing ranges. |
+| **Case 2**<br>(ON = 0.1 ms, OFF = 0.05 ms) | High-speed pulse using small R and C | Fast switching is possible but requires precise low-value components. Useful for short pulse generation. |
+| **Case 3**<br>(ON = 0.3 ms, OFF = 0.4 ms)<br>with inverter | Inverter used after 555 output | Shows how logical inversion helps overcome 555 timer’s limitations, allowing ON < OFF timing. |
+
+
+# Simulation in Virtual Lab Astable Multivibrator
+## Procedure:
+1.	Connect the components
+2.	Click on 'Check Connection' button to check the connections.
+3.	If connected wrong, click on the wrong connection. Else click on 'Delete all connection' button to erase all the connections.
+4.	Intially set R a=3.3 kΩ, R b=6.8kΩ, C=0.1µf, Vcc=5 V.
+5.	Click on "Calculate" button.
+6.	Now note the output voltage.
+7.	Click on "Plot" button to plot Output Voltage, Capacitance Voltage
+8.	Click on "Clear" button to clear the data.
+9.	Repeat the experiment for another set of resistance value.
+10.	Set the Resistance (Ra) value (1 kΩ - 10 kΩ).
+11.	Set the Resistance (Rb) value (1 kΩ - 10 kΩ).
+12.	Set the Capacitance (C) value (0.1 µf - 10 µf) .
+13.	Set supply voltage (Vcc).
+
+## Circuit Diagram
+![image](https://github.com/user-attachments/assets/303eba91-66eb-4a6a-9dbc-12f03dbb176c)
+
+
+## Otuput Waveform
+Voltage Across the Capacitor: 
+![image](https://github.com/user-attachments/assets/3894310a-e307-4e17-a570-e0371812d10f)
+
+
+Output Waveform: -
+![image](https://github.com/user-attachments/assets/df261aa6-19a1-41bf-82f9-d65b0f5742c9)
