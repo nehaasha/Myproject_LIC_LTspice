@@ -214,3 +214,4 @@ VDD: library = analogLib, cell = Vsin\
 + In ADE, press Fission, choose Save State, select the cell view, and click OK.
 
 ### Example Circuit
+![Image](https://github.com/user-attachments/assets/1714bbce-dd02-4494-9203-d82ad65b5462)
