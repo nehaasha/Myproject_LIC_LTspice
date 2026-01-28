@@ -95,7 +95,7 @@ Case 3: VGS ≥ VTH (Inversion & Conduction)
 + VGS ≥ VTH and small VDS
 + Channel is formed
 + MOSFET behaves like a variable resistor
-+ 
++ I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L [(V<sub>GS</sub>-V<sub>TH</sub>)(V<sub>DS</sub>)-(V<sub>DS</sub>)<sup>2</sup>/2)]
 
 **Saturation Region**
 
@@ -103,3 +103,51 @@ Case 3: VGS ≥ VTH (Inversion & Conduction)
 + Channel pinches off near drain
 + ID becomes almost constant
 + Used in amplifiers
++ I<sub>D</sub> = 1/2U<sub>n</sub>C<sub>ox</sub>W/L (V<sub>GS</sub>-V<sub>TH</sub>)<sup>2</sup>
+
+### Challenges Faced in Mixed Signal Generation
++ Noise and Interference
++ Clock Jitter and Timing Errors
++ Analog–Digital Isolation
++ Power Supply Noise
++ Signal Integrity Issues
++ Limited Resolution and Accuracy
++ Process Variations
++ Thermal Effects
+
+### Role of BJT in Mixed-Signal IC
+BJTs play an important role in mixed-signal ICs by providing high gain, low noise, and good linearity for analog signal processing. They are widely used in amplifiers, current mirrors, and biasing circuits to ensure stable and accurate operation. Due to their predictable temperature characteristics, BJTs are essential in bandgap reference circuits. They also offer better matching and high-speed performance, making them suitable for interfacing and buffering between sensitive analog blocks and noisy digital sections.
+
+### Major Analog Blocks in Chip Design :
+**1. Phase Locked Loop (PLL):**
+PLL is used to generate a stable and accurate clock signal by locking the output frequency and phase to a reference clock, and it is widely used in communication systems and processors.
+
+**2. Bandgap Reference (BGR):**
+BGR provides a stable reference voltage that is independent of temperature, supply voltage, and process variations, making it essential for reliable operation of analog and mixed-signal circuits.
+
+**3. Low Dropout Regulator (LDO):**
+LDO is used to supply a constant and noise-free regulated voltage to sensitive analog and digital blocks even when the input voltage is close to the output voltage.
+
+### Mixed Signal IC Design FLow
+Domain-specific design\
+1.Analog/RF
++ Schematic capture
++ Analog simulation\
+2.Digital
++ Design entry
++ Behavioral simulation\
+3.Mixed-signal analysis\
+4.Physical design\
+5.Analog/RF
++ Physical layout
++ Physical verification
++ Post layout simulation\
+6.Digital
++ Synthesis
++ Place and route
++ Functional verification\
+7.Full chip assembly & physical verification\
+8.Mixed-signal functional verification\/
+9.Tape-out
+
+### Bandgap Reference Circuit
