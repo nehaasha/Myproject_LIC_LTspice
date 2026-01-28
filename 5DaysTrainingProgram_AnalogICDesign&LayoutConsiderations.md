@@ -129,26 +129,88 @@ BGR provides a stable reference voltage that is independent of temperature, supp
 LDO is used to supply a constant and noise-free regulated voltage to sensitive analog and digital blocks even when the input voltage is close to the output voltage.
 
 ### Mixed Signal IC Design FLow
-Domain-specific design\
-1.Analog/RF
+
+Domain-specific design
+
+1. Analog/RF
 + Schematic capture
 + Analog simulation\
-2.Digital
+2. Digital
 + Design entry
 + Behavioral simulation\
-3.Mixed-signal analysis\
-4.Physical design\
-5.Analog/RF
+3. Mixed-signal analysis\
+4. Physical design\
+5. Analog/RF
 + Physical layout
 + Physical verification
 + Post layout simulation\
-6.Digital
+6. Digital
 + Synthesis
 + Place and route
 + Functional verification\
-7.Full chip assembly & physical verification\
-8.Mixed-signal functional verification\/
-9.Tape-out
+7. Full chip assembly & physical verification\
+8. Mixed-signal functional verification\/
+9. Tape-out
 
 ### Bandgap Reference Circuit
-<img width="411" height="371" alt="Image" src="https://github.com/user-attachments/assets/85221bae-7ac1-4fda-b50b-dc4a56145184" />
+<img width="411" height="371" alt="Image" src="https://github.com/user-attachments/assets/85221bae-7ac1-4fda-b50b-dc4a56145184" /> <img width="259" height="229" alt="Image" src="https://github.com/user-attachments/assets/b846f6a1-e52d-42b8-9c72-d5446b17e256" />
+
+**Temperature Independent Reference**
++ It provides reference voltages and/or currents with little dependence to temperature which are useful in many analog circuits. 
++ Key idea: add two quantities with opposite temperature coefficient with proper weighting -  the resultant quantity exhibits zero temperature
+coefficient.
++ base-emitter voltage of bipolar transistors or, more generally, the forward voltage of a pn-junction diode exhibits a **negative TC**.∂VBE/∂T ≈ -1.5 mV/K.
++ if two bipolar transistors operate at unequal current densities, then the difference between their base-emitter voltages is directly proportional to the absolute
+temperature
++ VBE difference exhibits a positive temperature coefficient i.e **Positive TC**, this TC is independent of the temperature or behavior of the collector currents
++ With the negative- and positive-TC voltages obtained, we can now develop areference (VREF ) that has a nominally zero temperature coefficient.,\
+**VREF = α1VBE + α2(VTln(n))**,\
+where VTln(n) is the difference between the base-emitter voltages of the two bipolar transistors operating at different current densities.
++ the reference voltage exhibiting a nominally-zero TC is given by a few fundamental numbers: bandgap voltage of silicon, Eg/q, the temperature exponent of mobility, m, and thethermal voltage, VT.\
+  V<sub>ref</sub> ~ V<sub>BE</sub>+17.2V<sub>T</sub>\
+  V<sub>ref</sub> ~ (E<sub>g</sub>/q)+(4+m)V<sub>T</sub>\
+  The term “bandgap” is used here because as T=0, V<sub>ref</sub> ~ (E<sub>g</sub>/q)
++ Hence the PTAT (proportional to absolute temperature) voltage is added to the CTAT (complementary to absolute temperature) voltage (like VBE of a BJT), the resulting voltage converges to a value near Eg/q (Eg divided by electronic charge) at 0 K. Therefore they are called as BGR circuits.
+
+### Introduction to Cadense Tool
+Cadence Virtuoso is a specialized tool within the Cadence EDA suite used for analog, digital, and mixed-signal IC design. It provides an integrated environment for schematic capture, circuit simulation, layout design, and verification. Virtuoso allows designers to create complex circuits, perform transistor-level simulations, and generate layouts that can be fabricated as integrated circuits. Its tight integration of design and verification tools ensures accurate, high-performance designs with reduced development time.\
+**Steps to Create a Library and Cell in Cadence Virtuoso:**
++ Open Cadence Virtuoso, create a folder, and open a terminal. Type csh, then source /home/install/cshrc, and finally virtuoso to launch the tool.
++ In Virtuoso, go to Tools → Library Manager, then File → New → Library. Name it BGR_test and attach it to the existing library GPDK045.
++ To create a cell, select BGR_test, then File → New → Cell View. Name the cell test, set View and Type as schematic, and click OK.\
+**Steps to Add Instances in Cadence Virtuoso:**
++ Press I on the keyboard to add an instance.
++ To add a resistor, select analogLib as the library and RES as the cell.
++ To add an NMOS transistor, select GPDK045 as the library and NMOS_1V as the cell.
++ To add power and ground:
+VDC: library = analogLib, cell = Vdc\
+GND: library = analogLib, cell = gnd\
+VDD: library = analogLib, cell = Vsin\
+**Basic Operations in Cadence Virtuoso:**
++ To add a component, press I.
++ To change the value of a component, select it and press Q.
++ To connect wires, press W.
++ To assign a wire name, press L.\
+**DC analysis:**
++ Launch ADE L and select Analysis → Choose, then set DC Analysis. Save the DC operating point.
++ Go to Output, select the signals to be plotted, choose Select on Device, and run the simulation to get the output.
++ To view all DC operating points, go to Results → Annotate → DC Operating Point.
++ To check parameters of each component, go to Results → Print → DC Operating Point.
++ To simulate for different component values, select the component, open Edit Properties, replace the value with a variable name, and click OK.
++ In ADE L, go to Variables → Copy from Cell View, set the new values, and run the simulation to get updated outputs. \
+**Parameter Sweep (DC Range Analysis):**
++ In ADE L, select Edit → Sweep Variable.
++ Choose the design variable (e.g., Vbias), set Start and Stop values, sweep type as Linear, and number of steps (e.g., 5).
++ Click OK and run the simulation.
++ For multiple parameters, use EDL → Parameter Analysis, select variable names, define ranges, and run.\
+**Transient Analysis:**
++ Go to Simulation → Choose → Transient.
++ Set the Stop Time and select Conservative option, then run the simulation.\
+**AC Analysis:**
++ Go to Simulation → Choose → AC Analysis.
++ Set Start and Stop frequencies, sweep type as Logarithmic, and points per decade.
++ Select the input voltage, open Edit Properties, and set AC Magnitude = 1 V, then run the simulation.\
+**Saving the Schematic:**
++ In ADE, press Fission, choose Save State, select the cell view, and click OK.
+
+### Example Circuit
