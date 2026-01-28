@@ -151,3 +151,4 @@ Domain-specific design\
 9.Tape-out
 
 ### Bandgap Reference Circuit
+<img width="411" height="371" alt="Image" src="https://github.com/user-attachments/assets/85221bae-7ac1-4fda-b50b-dc4a56145184" />
